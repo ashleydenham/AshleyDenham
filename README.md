@@ -1,6 +1,6 @@
 # AshleyDenham.me
 
-Personal portfolio and private infrastructure hub for **Ashley Denham** — Director & Founder at Hamily Holdings Pty Ltd.
+Personal home page for **Ashley Denham** — Adelaide, Australia.
 
 ## Live Site
 
@@ -8,24 +8,32 @@ Personal portfolio and private infrastructure hub for **Ashley Denham** — Dire
 
 ## Stack
 
-- **Pure HTML/CSS/JS** — zero dependencies, zero build step
+- **Tailwind CSS 3** via CDN — zero build step
+- **DM Sans** + **Playfair Display** (Google Fonts)
+- **Pure vanilla JS** — IntersectionObserver scroll reveals, marquee, glassmorphic private panel
 - **GitHub Pages** — hosting with custom domain
-- **CSS Layers** — `@layer reset, base, theme, components, utilities, motion`
-- **Display P3** — wide-gamut colour support for HDR screens
-- **Scroll-driven animations** — progressive enhancement with `animation-timeline: view()`
-- **View Transitions API** — smooth page navigation
 
 ## Structure
 
 ```
-├── index.html          # Portfolio — About, Journey, Projects, Certifications, Connect
-├── secret.html         # Private Tailscale Network Hub (infrastructure dashboard)
-├── 404.html            # Custom 404 page
-├── CNAME               # Custom domain config for GitHub Pages
-├── .nojekyll           # Bypass Jekyll processing
-└── assets/
-    └── avatar.jpg      # Profile image
+├── index.html      # Single-page portfolio with integrated private panel
+├── 404.html        # Custom 404 page
+├── avatar.jpg      # Profile photo
+├── CNAME           # Custom domain config
+└── .github/
+    └── workflows/
+        └── jekyll-gh-pages.yml
 ```
+
+## Quick Edit Guide
+
+All editable content is at the top of the `<script>` block in `index.html`:
+
+- **`TECH_ROW_1` / `TECH_ROW_2`** — tech badge marquee labels
+- **`PRIVATE_LINKS`** — Tailscale server links (shown via lock icon)
+- **Story text** — edit the `#story` section HTML directly
+- **Projects** — edit or copy/paste project card blocks in `#projects`
+- **Avatar** — replace `avatar.jpg` with your photo (square, <200KB)
 
 ## Deployment
 
