@@ -5,1004 +5,248 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ashley Denham — Adelaide, Australia</title>
   <meta name="description" content="Ashley Denham — nursing background, now exploring AI, tech, and legal training in Adelaide.">
-  <meta property="og:title" content="Ashley Denham">
-  <meta property="og:description" content="Nursing background, now exploring AI, tech, and legal training in Adelaide.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ashleydenham.me/">
-  <meta property="og:site_name" content="Ashley Denham">
-  <meta name="theme-color" content="#FAF5F0">
-  <link rel="canonical" href="https://ashleydenham.me/">
+  <meta name="theme-color" content="#FAF5F8">
 
-  <!-- Google Fonts: Inter (body) + Newsreader (headings) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS 3 CDN with full custom config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            barbie:        '#E0218A',
-            'barbie-light':'#F5A3D0',
-            'barbie-faint':'#FDE8F3',
-            'barbie-glow': '#E0218A33',
-            cream:         '#FAF5F0',
-            'cream-warm':  '#F5EDE6',
-            ink:           '#1a1a2e',
-            'ink-soft':    '#5a5a7a',
-            'ink-faint':   '#9CA3AF',
-            sage:          '#10B981',
-            'sage-faint':  '#D1FAE5',
+            barbie:   '#E0218A',
+            'barbie-light': '#F5A3D0',
+            'barbie-faint': '#FDE8F3',
+            cream:    '#FAF5F8',
+            ink:      '#111827',
+            'ink-soft': '#4B5563',
+            'ink-faint': '#9CA3AF',
+            sage:     '#10B981',
           },
           fontFamily: {
-            sans:  ['"Inter"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            serif: ['"Newsreader"', 'Georgia', 'Cambria', 'serif'],
-          },
-          fontSize: {
-            '5xl': ['3rem',    { lineHeight: '1.1' }],
-            '6xl': ['3.75rem', { lineHeight: '1.05' }],
-            '7xl': ['4.5rem',  { lineHeight: '1' }],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
           },
           boxShadow: {
-            'card':       '0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06)',
-            'card-hover': '0 4px 8px rgba(0,0,0,0.06), 0 12px 28px rgba(0,0,0,0.10)',
-            'card-lg':    '0 8px 32px rgba(0,0,0,0.08)',
-            'glass':      '0 8px 32px rgba(224,33,138,0.12), 0 0 0 1px rgba(224,33,138,0.15)',
-            'badge':      '0 1px 4px rgba(0,0,0,0.05)',
-            'badge-hover':'0 2px 8px rgba(224,33,138,0.12)',
-            'nav':        '0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03)',
-          },
-          borderRadius: {
-            '4xl': '2rem',
+            'neu':       '8px 8px 16px rgba(180,160,175,0.15), -8px -8px 16px rgba(255,255,255,0.8)',
+            'neu-hover': '10px 10px 24px rgba(180,160,175,0.2), -10px -10px 24px rgba(255,255,255,0.9), 0 0 20px rgba(224,33,138,0.05)',
+            'glass':     '0 8px 32px rgba(224,33,138,0.15), 0 0 0 1px rgba(224,33,138,0.1)',
           },
           animation: {
-            'float':       'float 5s ease-in-out infinite',
-            'pulse-lock':  'pulseLock 3s ease-in-out infinite',
-            'marquee':     'marquee var(--duration, 45s) linear infinite',
-            'marquee-rev': 'marqueeRev var(--duration, 50s) linear infinite',
-            'panel-in':    'panelIn 0.35s cubic-bezier(0.22,1,0.36,1) both',
-            'hero-fade-1': 'heroFade 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s both',
-            'hero-fade-2': 'heroFade 0.6s cubic-bezier(0.22,1,0.36,1) 0.3s both',
-            'hero-fade-3': 'heroFade 0.6s cubic-bezier(0.22,1,0.36,1) 0.5s both',
-            'hero-fade-4': 'heroFade 0.6s cubic-bezier(0.22,1,0.36,1) 0.7s both',
-            'draw-line':   'drawLine 1s cubic-bezier(0.22,1,0.36,1) 0.9s both',
+            'draw-in':     'drawIn 1.5s cubic-bezier(0.22,1,0.36,1) 0.5s both',
+            'pulse-soft':  'pulseSoft 4s ease-in-out infinite',
+            'marquee':     'marquee var(--duration, 40s) linear infinite',
+            'marquee-rev': 'marqueeRev var(--duration, 45s) linear infinite',
+            'float':       'float 7s ease-in-out infinite',
+            'panel-in':    'panelIn 0.4s cubic-bezier(0.22,1,0.36,1) both',
           },
           keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%':      { transform: 'translateY(-8px)' },
-            },
-            pulseLock: {
-              '0%, 100%': { transform: 'scale(1)',    opacity: '0.6' },
-              '50%':      { transform: 'scale(1.08)', opacity: '1' },
-            },
-            marquee: {
-              '0%':   { transform: 'translateX(0)' },
-              '100%': { transform: 'translateX(-50%)' },
-            },
-            marqueeRev: {
-              '0%':   { transform: 'translateX(-50%)' },
-              '100%': { transform: 'translateX(0)' },
-            },
-            panelIn: {
-              '0%':   { opacity: '0', transform: 'scale(0.95) translateY(10px)' },
-              '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
-            },
-            heroFade: {
-              '0%':   { opacity: '0', transform: 'translateY(16px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            drawLine: {
-              '0%':   { transform: 'scaleX(0)' },
-              '100%': { transform: 'scaleX(1)' },
-            },
+            drawIn: { '0%': { transform: 'scaleX(0)' }, '100%': { transform: 'scaleX(1)' } },
+            pulseSoft: { '0%, 100%': { transform: 'scale(1)', opacity: '0.6' }, '50%': { transform: 'scale(1.08)', opacity: '0.9' } },
+            marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+            marqueeRev: { '0%': { transform: 'translateX(-50%)' }, '100%': { transform: 'translateX(0)' } },
+            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
+            panelIn: { '0%': { opacity: '0', transform: 'scale(0.95) translateY(15px)' }, '100%': { opacity: '1', transform: 'scale(1) translateY(0)' } },
           },
-        },
-      },
+        }
+      }
     };
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
   <style>
-    /* ========================================
-       BASE STYLES
-       ======================================== */
-
-    /* Warm off-white base with subtle grain texture for warmth */
     body {
-      background-color: #FAF5F0;
+      background: linear-gradient(180deg, #FAF5F8 0%, #FDF9FB 50%, #FAF5F8 100%);
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      cursor: auto;
     }
 
-    /* Subtle CSS grain/noise texture overlay for organic feel */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 256px 256px;
-    }
-
-    /* ========================================
-       SCROLL REVEAL SYSTEM
-       Elements start nearly invisible and slide up.
-       IntersectionObserver adds .is-visible class.
-       ======================================== */
-    .reveal {
-      opacity: 0.01;
-      transform: translateY(20px);
-      transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1),
-                  transform 0.6s cubic-bezier(0.22,1,0.36,1);
-      will-change: opacity, transform;
-    }
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Stagger delays for grouped cards */
-    .reveal-stagger-1 { transition-delay: 0.1s; }
-    .reveal-stagger-2 { transition-delay: 0.2s; }
-    .reveal-stagger-3 { transition-delay: 0.3s; }
-
-    /* ========================================
-       HERO DECORATIVE LINE
-       ======================================== */
-    .hero-line {
-      transform-origin: left;
-      transform: scaleX(0);
-    }
-
-    /* ========================================
-       CARD HOVER LIFT
-       Smooth translateY(-4px) + deeper shadow
-       ======================================== */
-    .card-lift {
-      transition: transform 0.25s cubic-bezier(0.22,1,0.36,1),
-                  box-shadow 0.25s cubic-bezier(0.22,1,0.36,1);
-      will-change: transform, box-shadow;
-    }
-    .card-lift:hover {
-      transform: translateY(-4px);
-    }
-
-    /* ========================================
-       MARQUEE SYSTEM
-       Two rows scrolling opposite directions.
-       Pauses on hover for readability.
-       ======================================== */
-    .marquee-track {
-      display: flex;
-      width: max-content;
-    }
-    .marquee-row:hover .marquee-track {
-      animation-play-state: paused !important;
-    }
-
-    /* ========================================
-       GLASSMORPHISM PANEL
-       ======================================== */
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.80);
-      backdrop-filter: blur(32px) saturate(1.5);
-      -webkit-backdrop-filter: blur(32px) saturate(1.5);
-    }
-
-    /* ========================================
-       NAV LINK UNDERLINE ANIMATION
-       ======================================== */
-    .nav-link {
-      position: relative;
-    }
-    .nav-link::after {
-      content: '';
+    /* Subtle Adelaide Skyline Hint */
+    .hero-bg {
       position: absolute;
-      bottom: -2px;
-      left: 50%;
-      width: 0;
-      height: 2px;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20L5 15L10 20L15 10L20 20L30 5L40 20L50 15L60 20L70 8L80 20L90 12L100 20' fill='none' stroke='%23E0218A' stroke-width='0.5'/%3E%3C/svg%3E");
+      background-size: 200px;
+      background-position: bottom;
+      background-repeat: repeat-x;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .underline-draw { transform-origin: left; transform: scaleX(0); }
+    .underline-draw.drawn { animation: drawIn 1.5s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+    .marquee-track { display: flex; width: max-content; }
+    .marquee-row:hover .marquee-track { animation-play-state: paused !important; }
+
+    .card-lift { transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s cubic-bezier(0.22,1,0.36,1); }
+    .card-lift:hover { transform: translateY(-4px) scale(1.015); }
+
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(30px) saturate(1.5);
+      -webkit-backdrop-filter: blur(30px) saturate(1.5);
+    }
+
+    /* Magical Cursor Sparkles */
+    .sparkle {
+      position: fixed;
+      width: 6px;
+      height: 6px;
       background: #E0218A;
-      border-radius: 1px;
-      transition: width 0.3s ease, left 0.3s ease;
-    }
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
-      left: 0;
-    }
-
-    /* ========================================
-       DROP CAP — First letter of story
-       ======================================== */
-    .drop-cap::first-letter {
-      float: left;
-      font-family: 'Newsreader', Georgia, serif;
-      font-size: 3.5rem;
-      font-weight: 700;
-      line-height: 0.8;
-      margin-right: 0.5rem;
-      margin-top: 0.15rem;
-      color: #E0218A;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.6;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      z-index: 9999;
     }
 
-    /* ========================================
-       SCROLL INDICATOR
-       ======================================== */
-    @keyframes scrollBounce {
-      0%, 100% { transform: translateY(0); opacity: 0.4; }
-      50%      { transform: translateY(6px); opacity: 0.8; }
-    }
-    .scroll-hint {
-      animation: scrollBounce 2.2s ease-in-out infinite;
-    }
-
-    /* ========================================
-       AVATAR GRADIENT BORDER
-       Slightly rounded square (rounded-2xl)
-       with pink gradient border effect.
-       ======================================== */
-    .avatar-frame {
-      background: linear-gradient(135deg, #E0218A 0%, #F5A3D0 50%, #E0218A 100%);
-      padding: 3px;
-    }
-
-    /* ========================================
-       PRINT STYLES
-       Hide nav, marquee, lock, show content.
-       ======================================== */
     @media print {
-      nav, .marquee-row, #lock-btn, #private-overlay, .scroll-hint, .section-divider { display: none !important; }
-      .reveal { opacity: 1 !important; transform: none !important; }
+      nav, .marquee-row, #lock-btn, #private-overlay { display: none !important; }
       body { background: #fff !important; }
-      body::before { display: none !important; }
-    }
-
-    /* ========================================
-       FOCUS STATES — Pink outline for a11y
-       ======================================== */
-    :focus-visible {
-      outline: 2px solid #E0218A;
-      outline-offset: 3px;
-      border-radius: 4px;
-    }
-
-    /* ========================================
-       REDUCED MOTION — Respect user prefs
-       ======================================== */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-      .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-      .marquee-track {
-        animation: none !important;
-      }
-    }
-
-    /* ========================================
-       SECTION DIVIDER — small decorative star
-       ======================================== */
-    .section-divider {
-      text-align: center;
-      color: #E0218A;
-      font-size: 0.875rem;
-      letter-spacing: 0.5em;
-      opacity: 0.5;
     }
   </style>
 </head>
 
-<body class="font-sans text-ink leading-relaxed overflow-x-hidden">
+<body class="font-sans text-ink leading-relaxed overflow-x-hidden relative">
 
-  <!-- =====================================================================
-       NAVIGATION
-       Sticky top nav. "Ashley" (casual first name) with pink dot on left.
-       Right side: Story / Values / Projects / Tech links.
-       Gains frosted glass background on scroll.
-       Simple hamburger menu on mobile.
-       ===================================================================== -->
-  <nav id="site-nav"
-       class="fixed top-0 inset-x-0 z-50 transition-all duration-300"
-       aria-label="Main navigation">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Brand — casual first name only -->
-      <a href="#top" class="flex items-center gap-2 font-sans font-semibold text-base text-ink tracking-tight group" aria-label="Back to top">
-        Ashley
-        <span class="inline-block w-1.5 h-1.5 rounded-full bg-barbie group-hover:scale-150 transition-transform duration-300" aria-hidden="true"></span>
-      </a>
-      <!-- Desktop nav links -->
-      <ul class="hidden sm:flex items-center gap-8 text-sm font-medium text-ink-soft">
-        <li><a href="#story"    class="nav-link hover:text-barbie transition-colors duration-200" data-nav>Story</a></li>
-        <li><a href="#values"   class="nav-link hover:text-barbie transition-colors duration-200" data-nav>Values</a></li>
-        <li><a href="#projects" class="nav-link hover:text-barbie transition-colors duration-200" data-nav>Projects</a></li>
-        <li><a href="#tech"     class="nav-link hover:text-barbie transition-colors duration-200" data-nav>Tech</a></li>
-      </ul>
-      <!-- Mobile hamburger button -->
-      <button id="mobile-menu-btn"
-              class="sm:hidden p-2 -mr-2 text-ink-soft hover:text-barbie transition-colors"
-              aria-label="Open menu"
-              aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-    <!-- Mobile dropdown menu -->
-    <div id="mobile-menu" class="sm:hidden hidden bg-white/90 backdrop-blur-xl border-t border-barbie/10">
-      <ul class="flex flex-col items-center gap-5 py-6 text-sm font-medium text-ink-soft">
-        <li><a href="#story"    class="hover:text-barbie transition-colors" data-nav-mobile>Story</a></li>
-        <li><a href="#values"   class="hover:text-barbie transition-colors" data-nav-mobile>Values</a></li>
-        <li><a href="#projects" class="hover:text-barbie transition-colors" data-nav-mobile>Projects</a></li>
-        <li><a href="#tech"     class="hover:text-barbie transition-colors" data-nav-mobile>Tech</a></li>
-      </ul>
-    </div>
+  <nav id="site-nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-4 px-6 flex justify-between items-center max-w-5xl mx-auto">
+    <a href="#top" class="font-serif font-bold text-lg text-ink group flex items-center gap-2">
+      Ashley Denham
+      <span class="w-1.5 h-1.5 rounded-full bg-barbie group-hover:scale-150 transition-transform"></span>
+    </a>
+    <ul class="hidden sm:flex gap-8 text-sm font-medium text-ink-soft">
+      <li><a href="#story" class="hover:text-barbie transition-colors">Story</a></li>
+      <li><a href="#care" class="hover:text-barbie transition-colors">Care About</a></li>
+      <li><a href="#projects" class="hover:text-barbie transition-colors">Projects</a></li>
+      <li><a href="#tech" class="hover:text-barbie transition-colors">Tech</a></li>
+    </ul>
   </nav>
 
-
   <main>
-
-    <!-- =====================================================================
-         HERO SECTION (70vh max)
-         Asymmetric layout: text left-aligned, avatar floating on right.
-         NOT centered. Editorial feel like Brittany Chiang's site.
-         Small italic greeting, big Newsreader name, warm tagline.
-         Avatar in rounded-2xl frame (not circle) with pink gradient border.
-         ===================================================================== -->
-    <section id="top" class="min-h-[70vh] flex items-center px-6 pt-24 pb-16 relative">
-      <div class="max-w-5xl mx-auto w-full">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-16">
-
-          <!-- Left side: text content -->
-          <div class="md:max-w-lg">
-            <!-- Small greeting in pink italic -->
-            <p class="font-serif italic text-barbie text-lg mb-3 animate-hero-fade-1">hey there</p>
-
-            <!-- Big name in Newsreader italic -->
-            <h1 class="font-serif italic font-bold text-5xl sm:text-6xl md:text-7xl text-ink tracking-tight leading-none mb-5 animate-hero-fade-2">
-              Ashley<br>Denham
-            </h1>
-
-            <!-- Warm tagline -->
-            <p class="text-lg sm:text-xl text-ink-soft leading-relaxed max-w-md animate-hero-fade-3">
-              Former nurse, current law student, and full-time curious person — building things with AI and tech from Adelaide.
-            </p>
-
-            <!-- Decorative pink line with small asterisk -->
-            <div class="flex items-center gap-3 mt-8 animate-hero-fade-4">
-              <div class="hero-line animate-draw-line h-[2px] w-20 bg-gradient-to-r from-barbie to-barbie-light rounded-full"></div>
-              <span class="text-barbie text-xs" aria-hidden="true">&#10043;</span>
-            </div>
+    <section id="top" class="min-h-screen flex flex-col items-center justify-center px-5 relative overflow-hidden">
+      <div class="hero-bg"></div>
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <div class="mb-10 animate-float">
+          <div class="relative">
+            <div class="absolute -inset-4 rounded-full bg-barbie-faint blur-2xl animate-pulse-soft"></div>
+            <img src="avatar.jpg" alt="Ashley Denham" class="relative w-40 h-40 rounded-full object-cover shadow-neu border-4 border-white">
           </div>
-
-          <!-- Right side: avatar with gradient border and float animation -->
-          <!-- ============================================================
-               AVATAR — HOW TO REPLACE
-               1. Take a nice photo of yourself (square crop works best).
-               2. Save it as "avatar.jpg" in the same folder as this file
-                  (the root of your GitHub repo).
-               3. Keep it under 200 KB for fast loading (tinypng.com).
-               4. The src below points to avatar.jpg — just replace the
-                  file and push. That's it!
-               The image shows in a modern rounded-square frame with a
-               pink gradient border and a gentle float animation.
-               ============================================================ -->
-          <div class="animate-float flex-shrink-0 self-center md:self-auto">
-            <div class="relative">
-              <!-- Soft pink glow behind avatar -->
-              <div class="absolute -inset-6 rounded-3xl bg-barbie/8 blur-2xl" aria-hidden="true"></div>
-              <!-- Gradient border frame -->
-              <div class="relative avatar-frame rounded-2xl">
-                <img
-                  src="https://ashleydenham.me/avatar.jpg"
-                  alt="Photo of Ashley Denham"
-                  width="260"
-                  height="260"
-                  class="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl object-cover bg-cream"
-                  loading="eager"
-                  fetchpriority="high"
-                >
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
-
-      <!-- Scroll prompt at bottom -->
-      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 scroll-hint" aria-hidden="true">
-        <svg class="w-5 h-5 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-        </svg>
+        <h1 class="font-serif text-5xl sm:text-7xl font-bold text-ink tracking-tight">Ashley Denham</h1>
+        <div class="w-24 h-1 mt-4 mb-8 relative mx-auto">
+          <div class="underline-draw absolute inset-0 rounded-full bg-gradient-to-r from-barbie via-barbie-light to-barbie"></div>
+        </div>
+        <p class="text-xl text-ink-soft max-w-lg leading-relaxed">
+          Nursing background, now exploring AI & tech, studying law, and figuring it out from Adelaide.
+        </p>
       </div>
     </section>
 
-
-    <!-- Decorative divider -->
-    <div class="section-divider py-4" aria-hidden="true">&#10038;</div>
-
-
-    <!-- =====================================================================
-         MY STORY
-         Left-aligned, max-w-2xl for comfortable reading measure.
-         Beautiful typography: text-lg, leading-8.
-         First paragraph has a decorative drop cap (pink first letter).
-         Key phrase highlighted with pink left-border pull-quote style.
-         ~200 words, warm and genuine first-person voice.
-         ===================================================================== -->
-    <section id="story" class="bg-white py-20 sm:py-28 px-6">
-      <div class="max-w-2xl mx-auto">
-        <div class="reveal">
-          <h2 class="font-serif italic text-3xl sm:text-4xl font-bold text-ink mb-2">My Story</h2>
-          <div class="w-12 h-[2px] bg-gradient-to-r from-barbie to-barbie-light rounded-full mb-10"></div>
-        </div>
-
-        <div class="space-y-6 text-ink-soft text-lg leading-8">
-          <!-- First paragraph with drop cap -->
-          <p class="reveal drop-cap">
-            Hey — I'm Ashley. I'm based in Adelaide, South Australia, and for the past few years I worked as a registered nurse, mostly in aged care and community health. I loved the people. I learned a lot about patience, about leadership, and about showing up when things are hard. Nursing taught me that the most important work is often the quietest.
-          </p>
-
-          <!-- Pull-quote style highlight for the key phrase -->
-          <div class="reveal border-l-[3px] border-barbie pl-6 py-2 my-8">
-            <p class="text-ink font-medium text-lg leading-8">
-              I've taken a break from nursing to focus on AI and tech, and undertake legal training (JD). It's been a big shift — some days exciting, some days humbling, most days both at once.
-            </p>
-          </div>
-
-          <p class="reveal">
-            I'm learning to code, tinkering with electronics, studying how large language models work, and slowly building things I find interesting. I don't have all the answers figured out yet, and that's okay. I'm drawn to the intersection of technology and care — how we can use these tools to genuinely help people, not just move fast.
-          </p>
-
-          <p class="reveal">
-            I started Hamily Holdings as a home for the projects and ideas I'm working on. This little corner of the internet is where I share what I'm up to. Thanks for stopping by — it genuinely means a lot.
-          </p>
+    <section id="story" class="py-32 px-5">
+      <div class="max-w-2xl mx-auto reveal">
+        <h2 class="font-serif text-4xl font-bold text-ink mb-3">My Story</h2>
+        <div class="w-12 h-1 bg-barbie/30 rounded-full mb-10"></div>
+        <div class="space-y-6 text-lg text-ink-soft leading-loose">
+          <p>Hey — I'm Ashley. I'm based in Adelaide, South Australia, and for the past few years I worked as a registered nurse, mostly in aged care. I loved the people. I learned a lot about patience, leadership, and showing up when things are hard.</p>
+          <p>But I've taken a break from nursing to focus on AI and tech, and undertake legal training (JD). It's been a big shift — some days exciting, some days humbling. I'm learning to code, tinkering with electronics, studying how large language models work, and slowly building things I find interesting.</p>
+          <p>I don't have all the answers figured out yet, and that's okay. I'm drawn to the intersection of technology and care — how we can use these tools to genuinely help people, not just move fast. I started Hamily Holdings as a home for the projects and ideas I'm working on.</p>
+          <p>This little corner of the internet is where I share what I'm up to. Thanks for stopping by.</p>
         </div>
       </div>
     </section>
 
-
-    <!-- Decorative divider -->
-    <div class="section-divider py-4 bg-cream" aria-hidden="true">&#183; &#183; &#183;</div>
-
-
-    <!-- =====================================================================
-         WHAT I CARE ABOUT
-         Three WHITE cards in a row with VISIBLE shadows (not cream-on-cream).
-         Each card has a subtle pink gradient top border for identity.
-         Icons are clean inline SVGs (NOT emoji).
-         Hover: lift + shadow deepens + top border glows.
-         Cards: Learning, Building Things, Family.
-         ===================================================================== -->
-    <section id="values" class="bg-cream py-20 sm:py-28 px-6">
-      <div class="max-w-4xl mx-auto">
-        <!-- Section heading: left-aligned for editorial feel -->
-        <div class="mb-14 reveal">
-          <h2 class="font-serif italic text-3xl sm:text-4xl font-bold text-ink mb-2">What I Care About</h2>
-          <div class="w-12 h-[2px] bg-gradient-to-r from-barbie to-barbie-light rounded-full"></div>
+    <section id="care" class="py-32 px-5 relative">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-serif text-4xl font-bold text-ink mb-3">What I Care About</h2>
+          <div class="w-12 h-1 bg-barbie/30 rounded-full mx-auto"></div>
         </div>
-
-        <div class="grid sm:grid-cols-3 gap-6 lg:gap-8">
-
-          <!-- Card 1: Learning -->
-          <div class="reveal card-lift bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover overflow-hidden relative group">
-            <!-- Top gradient border accent -->
-            <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-barbie via-barbie-light to-barbie rounded-t-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <!-- SVG icon: open book -->
-            <div class="w-12 h-12 rounded-xl bg-barbie-faint flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-barbie" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
-              </svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl text-ink mb-2">Learning</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">
-              Always a student. Right now it's AI, law, and figuring out how they overlap. I love the feeling of not knowing something yet — it means there's still so much to discover.
-            </p>
+        <div class="grid sm:grid-cols-3 gap-8">
+          <div class="reveal card-lift bg-white/70 rounded-[2rem] p-8 shadow-neu text-center border border-white">
+            <h3 class="font-serif text-2xl font-bold text-ink mb-3 mt-4">Learning</h3>
+            <p class="text-ink-soft text-sm leading-relaxed">Always a student. Right now it's AI, law, and figuring out how they overlap. I love the feeling of not knowing something yet.</p>
           </div>
-
-          <!-- Card 2: Building Things -->
-          <div class="reveal reveal-stagger-1 card-lift bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover overflow-hidden relative group">
-            <!-- Top gradient border accent -->
-            <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-sage via-emerald-300 to-sage rounded-t-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <!-- SVG icon: wrench/build -->
-            <div class="w-12 h-12 rounded-xl bg-sage-faint flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.049.58.025 1.193-.14 1.743"/>
-              </svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl text-ink mb-2">Building Things</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">
-              Arduino at 2am, training language models, paper trading setups. There's something grounding about making real things with your hands and your code.
-            </p>
+          <div class="reveal card-lift bg-white/70 rounded-[2rem] p-8 shadow-neu text-center border border-white" style="transition-delay: 0.1s">
+            <h3 class="font-serif text-2xl font-bold text-ink mb-3 mt-4">Electronics</h3>
+            <p class="text-ink-soft text-sm leading-relaxed">Arduino, Raspberry Pi, blinking LEDs at 2am. There's something grounding about building physical things with your hands.</p>
           </div>
-
-          <!-- Card 3: Family -->
-          <div class="reveal reveal-stagger-2 card-lift bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover overflow-hidden relative group">
-            <!-- Top gradient border accent -->
-            <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-barbie via-pink-300 to-barbie-light rounded-t-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <!-- SVG icon: heart -->
-            <div class="w-12 h-12 rounded-xl bg-barbie-faint flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-barbie" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
-              </svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl text-ink mb-2">Family</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">
-              Everything I do comes back to the people I love. They're my reason, my grounding force, and my biggest supporters. The rest is just details.
-            </p>
+          <div class="reveal card-lift bg-white/70 rounded-[2rem] p-8 shadow-neu text-center border border-white" style="transition-delay: 0.2s">
+            <h3 class="font-serif text-2xl font-bold text-ink mb-3 mt-4">Family</h3>
+            <p class="text-ink-soft text-sm leading-relaxed">Everything I do comes back to Brad, our dogs Fred and Barney, and the people I love. They're my grounding force and biggest supporters.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- Decorative divider -->
-    <div class="section-divider py-4 bg-white" aria-hidden="true">&#10038;</div>
-
-
-    <!-- =====================================================================
-         PROJECTS
-         2x2 grid of cards. Each card has a colored gradient accent stripe
-         on the left side (different pastel/pink tones per card).
-         Clean SVG icons (NOT emoji). Title + one-line description.
-
-         =============================================================
-         HOW TO ADD / EDIT PROJECTS:
-         =============================================================
-
-         Each project is a card below inside the grid. To add a new project:
-
-         1. Copy one of the existing <div class="reveal card-lift ...">
-            blocks below.
-         2. Paste it inside the grid (before the closing </div> of the grid).
-         3. Change the left-stripe color by editing the gradient on the
-            inner accent div (e.g. from-pink-400 to-rose-300).
-         4. Replace the SVG icon. You can get icons from heroicons.com
-            or any inline SVG source. Keep them 24x24 viewBox.
-         5. Update the <h3> title and <p> description.
-
-         To remove a project: delete the entire card <div> block.
-
-         The grid is responsive: 2 columns on desktop, 1 on mobile.
-         Keep descriptions to one line (~15 words) for clean layout.
-
-         Example template:
-
-         <div class="reveal card-lift bg-white rounded-2xl shadow-card hover:shadow-card-hover overflow-hidden relative group">
-           <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-YOUR-COLOR to-YOUR-COLOR-LIGHT"></div>
-           <div class="p-6 pl-7">
-             <div class="w-10 h-10 rounded-lg bg-YOUR-FAINT flex items-center justify-center mb-4">
-               <svg class="w-5 h-5 text-YOUR-COLOR" ...>YOUR SVG PATH</svg>
-             </div>
-             <h3 class="font-serif font-bold text-lg text-ink mb-1">Project Name</h3>
-             <p class="text-ink-soft text-sm leading-relaxed">
-               One-line description of the project.
-             </p>
-           </div>
-         </div>
-
-         ===================================================================== -->
-    <section id="projects" class="bg-white py-20 sm:py-28 px-6">
-      <div class="max-w-4xl mx-auto">
-        <div class="mb-14 reveal">
-          <h2 class="font-serif italic text-3xl sm:text-4xl font-bold text-ink mb-2">Projects</h2>
-          <div class="w-12 h-[2px] bg-gradient-to-r from-barbie to-barbie-light rounded-full mb-3"></div>
-          <p class="text-ink-soft text-sm">Things I'm building or tinkering with.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-5 lg:gap-6">
-
-          <!-- Project 1: Mythdale -->
-          <div class="reveal card-lift bg-white rounded-2xl shadow-card hover:shadow-card-hover overflow-hidden relative group">
-            <!-- Left accent stripe — warm pink -->
-            <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-barbie to-barbie-light"></div>
-            <div class="p-6 pl-7">
-              <!-- SVG icon: game controller / dice -->
-              <div class="w-10 h-10 rounded-lg bg-barbie-faint flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-barbie" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.959.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"/>
-                </svg>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-ink mb-1">Mythdale</h3>
-              <p class="text-ink-soft text-sm leading-relaxed">
-                A browser-based RPG with idle skilling, offline progression, and achievement systems.
-              </p>
-            </div>
-          </div>
-
-          <!-- Project 2: Hammy LLM -->
-          <div class="reveal reveal-stagger-1 card-lift bg-white rounded-2xl shadow-card hover:shadow-card-hover overflow-hidden relative group">
-            <!-- Left accent stripe — purple -->
-            <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-violet-400 to-purple-300"></div>
-            <div class="p-6 pl-7">
-              <!-- SVG icon: sparkles / AI -->
-              <div class="w-10 h-10 rounded-lg bg-violet-50 flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-violet-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
-                </svg>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-ink mb-1">Hammy &mdash; LLM Assistant</h3>
-              <p class="text-ink-soft text-sm leading-relaxed">
-                A custom language model for personal use — trading insights, research, and general curiosity.
-              </p>
-            </div>
-          </div>
-
-          <!-- Project 3: AI Trading Sandbox -->
-          <div class="reveal reveal-stagger-2 card-lift bg-white rounded-2xl shadow-card hover:shadow-card-hover overflow-hidden relative group">
-            <!-- Left accent stripe — amber/gold -->
-            <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-amber-400 to-yellow-300"></div>
-            <div class="p-6 pl-7">
-              <!-- SVG icon: chart -->
-              <div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
-                </svg>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-ink mb-1">AI Trading Sandbox</h3>
-              <p class="text-ink-soft text-sm leading-relaxed">
-                Self-hosted paper trading with Ollama, PostgreSQL, Redis, and Grafana. Learning by doing.
-              </p>
-            </div>
-          </div>
-
-          <!-- Project 4: Hardware Experiments -->
-          <div class="reveal reveal-stagger-3 card-lift bg-white rounded-2xl shadow-card hover:shadow-card-hover overflow-hidden relative group">
-            <!-- Left accent stripe — teal/green -->
-            <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-sage to-emerald-300"></div>
-            <div class="p-6 pl-7">
-              <!-- SVG icon: chip/hardware -->
-              <div class="w-10 h-10 rounded-lg bg-sage-faint flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
-                </svg>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-ink mb-1">Hardware Experiments</h3>
-              <p class="text-ink-soft text-sm leading-relaxed">
-                Arduino and Raspberry Pi builds — sensors, automation, and whatever catches my eye.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+    <section id="tech" class="py-24 overflow-hidden">
+      <div class="marquee-row mb-6 reveal"><div class="marquee-track animate-marquee" id="mq1"></div></div>
+      <div class="marquee-row reveal"><div class="marquee-track animate-marquee-rev" id="mq2"></div></div>
     </section>
-
-
-    <!-- Decorative divider -->
-    <div class="section-divider py-4 bg-cream" aria-hidden="true">&#183; &#183; &#183;</div>
-
-
-    <!-- =====================================================================
-         TECH I'M INTO
-         Double-row marquee with larger, more visible badges.
-         White background, subtle pink border on hover, proper spacing.
-         Two rows scroll in OPPOSITE directions. Pause on hover.
-         The tech lists are defined in the JS arrays at top of script
-         for easy editing.
-         ===================================================================== -->
-    <section id="tech" class="bg-cream py-20 sm:py-28 overflow-hidden">
-      <div class="max-w-4xl mx-auto mb-14 px-6 reveal">
-        <h2 class="font-serif italic text-3xl sm:text-4xl font-bold text-ink mb-2">Tech I'm Into</h2>
-        <div class="w-12 h-[2px] bg-gradient-to-r from-barbie to-barbie-light rounded-full mb-3"></div>
-        <p class="text-ink-soft text-sm">Tools, languages, and platforms I'm learning or using.</p>
-      </div>
-
-      <!-- Row 1 — scrolls left -->
-      <div class="marquee-row mb-5 reveal" aria-label="Technology badges row 1">
-        <div class="marquee-track animate-marquee" style="--duration: 50s" id="marquee-row-1"></div>
-      </div>
-
-      <!-- Row 2 — scrolls right (reverse direction) -->
-      <div class="marquee-row reveal" aria-label="Technology badges row 2">
-        <div class="marquee-track animate-marquee-rev" style="--duration: 55s" id="marquee-row-2"></div>
-      </div>
-    </section>
-
   </main>
 
-
-  <!-- =====================================================================
-       FOOTER
-       "Made with care in Adelaide" + copyright. Minimal and warm.
-       Lock icon fixed bottom-right with subtle pink pulse.
-       ===================================================================== -->
-  <footer class="bg-white py-14 px-6 text-center relative border-t border-ink/5">
-    <p class="text-ink-faint text-sm">Made with care in Adelaide</p>
-    <p class="text-ink-faint/60 text-xs mt-1">&copy; 2026 Ashley Denham</p>
-
-    <!-- Lock icon — subtle, bottom-right, pink pulse, opens private panel -->
-    <button
-      id="lock-btn"
-      class="fixed bottom-5 right-5 z-40 w-10 h-10 rounded-full bg-white shadow-card flex items-center justify-center hover:shadow-card-hover transition-all duration-300 group"
-      aria-label="Open private panel"
-      title="Private area"
-    >
-      <svg class="w-4 h-4 text-barbie/50 group-hover:text-barbie transition-colors duration-300 animate-pulse-lock" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
-      </svg>
+  <footer class="py-16 text-center text-sm text-ink-faint">
+    &copy; 2026 Ashley Denham
+    <button id="lock-btn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/80 backdrop-blur shadow-neu hover:shadow-neu-hover flex items-center justify-center transition-all group">
+      <svg class="w-5 h-5 text-barbie/50 group-hover:text-barbie animate-pulse-soft" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
     </button>
   </footer>
 
-
-  <!-- =====================================================================
-       PRIVATE TAILSCALE PANEL
-       Glassmorphic overlay with backdrop-blur-xl, white/80 bg, pink border.
-       "Private — Home Servers" title. Clean list of Tailscale links with
-       copy buttons. Close with X button, Escape key, or click outside.
-       The link data is defined in the PRIVATE_LINKS JS array at top of
-       script for easy editing.
-       ===================================================================== -->
-  <div id="private-overlay"
-       class="fixed inset-0 z-50 hidden items-center justify-center p-5"
-       role="dialog"
-       aria-modal="true"
-       aria-label="Private home servers"
-  >
-    <!-- Backdrop — click to close -->
-    <div id="private-backdrop" class="absolute inset-0 bg-ink/30 backdrop-blur-sm" aria-hidden="true"></div>
-
-    <!-- Panel -->
-    <div id="private-panel"
-         class="relative glass-panel rounded-2xl shadow-glass max-w-md w-full p-8 border border-barbie/20 animate-panel-in"
-    >
-      <!-- Close button -->
-      <button id="private-close"
-              class="absolute top-4 right-4 w-8 h-8 rounded-full bg-barbie-faint/50 flex items-center justify-center text-ink-soft hover:text-barbie hover:bg-barbie-faint transition-all duration-200"
-              aria-label="Close panel">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
-
-      <h3 class="font-serif italic text-xl font-bold text-ink mb-1">Private &mdash; Home Servers</h3>
-      <p class="text-ink-faint text-xs mb-6">Tailscale network links. Only accessible on your tailnet.</p>
-
-      <ul id="tailscale-list" class="space-y-3" aria-label="Server links"></ul>
+  <div id="private-overlay" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div id="private-backdrop" class="absolute inset-0 bg-ink/10 backdrop-blur-md"></div>
+    <div class="relative glass-panel rounded-[2rem] shadow-glass max-w-sm w-full p-8 animate-panel-in border border-white/40">
+      <h3 class="font-serif text-2xl font-bold text-ink mb-6">Home Servers</h3>
+      <ul id="tailscale-list" class="space-y-4"></ul>
     </div>
   </div>
 
-
-  <!-- =====================================================================
-       JAVASCRIPT
-       All interactive behavior: marquee rendering, private panel,
-       scroll reveal, nav effects, mobile menu.
-
-       EDITABLE DATA ARRAYS are at the very top of this script block
-       so you can easily update tech badges and private links without
-       digging through the code.
-       ===================================================================== -->
   <script>
-    /* ==================================================================
-       EDITABLE DATA — Change these arrays to update your site!
-       ==================================================================
-
-       TECH BADGES
-       Each item is just a label string.
-       Row 1 and Row 2 are displayed in separate marquee tracks
-       that scroll in opposite directions.
-       Add, remove, or reorder however you like.
-    */
-    const TECH_ROW_1 = [
-      'Python', 'JavaScript', 'Tailscale', 'GitHub', 'Arduino',
-      'Raspberry Pi', 'VS Code', 'LangChain', 'Ollama', 'Docker',
-      'PostgreSQL', 'Redis', 'Linux',
-    ];
-
-    const TECH_ROW_2 = [
-      'TensorFlow', 'PyTorch', 'Grafana', 'HTML/CSS', 'Tailwind',
-      'Node.js', 'Git', 'Bash', 'Figma', 'Claude AI',
-      'Hugging Face', 'FastAPI', 'SQLite',
-    ];
-
-    /*
-       TAILSCALE / PRIVATE LINKS
-       Each entry: { name, desc, url }
-       These show in the private glassmorphic panel.
-       Replace the URLs with your real Tailscale IPs or MagicDNS names.
-    */
+    const TECH_ROW_1 = ['Python', 'JavaScript', 'Tailscale', 'YubiKey', 'Arduino', 'Raspberry Pi', 'Docker', 'PostgreSQL'];
+    const TECH_ROW_2 = ['PyTorch', 'Grafana', 'Tailwind', 'Node.js', 'Claude AI', 'Hugging Face', 'FastAPI'];
     const PRIVATE_LINKS = [
-      { name: 'Tailscale Admin',  desc: 'Network policies & ACLs',       url: 'https://login.tailscale.com/admin' },
-      { name: 'NAS Dashboard',    desc: 'Storage & backups',             url: 'http://nas.tailnet:5000' },
-      { name: 'AI Server',        desc: 'Ollama & model runtimes',       url: 'http://ai-srv.tailnet:8080' },
-      { name: 'Home Assistant',   desc: 'Smart home',                    url: 'http://homeassistant.tailnet:8123' },
-      { name: 'Grafana',          desc: 'Monitoring & dashboards',       url: 'http://grafana.tailnet:3000' },
+      { name: 'Tailscale Admin', url: 'https://login.tailscale.com/admin' },
+      { name: 'AI Server', url: 'http://ai-srv.tailnet:8080' }
     ];
 
+    const renderBadge = l => `<span class="inline-flex px-6 py-3 mx-3 rounded-full bg-white/50 shadow-sm text-sm text-ink-soft border border-white hover:text-barbie hover:border-barbie/30 transition-all cursor-default">${l}</span>`;
+    document.getElementById('mq1').innerHTML = TECH_ROW_1.map(renderBadge).join('').repeat(2);
+    document.getElementById('mq2').innerHTML = TECH_ROW_2.map(renderBadge).join('').repeat(2);
 
-    /* ==================================================================
-       MARQUEE RENDERING
-       Creates badge elements and duplicates them for seamless looping.
-       Badges are white bg, visible text, pink border on hover.
-       ================================================================== */
+    document.getElementById('tailscale-list').innerHTML = PRIVATE_LINKS.map(l => `
+      <li class="flex justify-between items-center p-4 bg-white/40 rounded-xl border border-white hover:border-barbie/20 transition-all">
+        <a href="${l.url}" class="font-medium text-ink hover:text-barbie text-sm">${l.name}</a>
+      </li>
+    `).join('');
 
-    function renderBadge(label) {
-      return `<span class="inline-flex items-center px-5 py-2.5 mx-2 rounded-full bg-white text-sm font-medium text-ink whitespace-nowrap border border-gray-200/80 shadow-badge hover:shadow-badge-hover hover:border-barbie/30 hover:text-barbie transition-all duration-300 cursor-default select-none">${label}</span>`;
-    }
+    // Interactions
+    const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('is-visible'); }));
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    window.onload = () => document.querySelector('.underline-draw').classList.add('drawn');
 
-    function fillMarquee(id, items) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const html = items.map(renderBadge).join('');
-      /* Duplicate the list so it loops seamlessly */
-      el.innerHTML = html + html;
-    }
+    const overlay = document.getElementById('private-overlay');
+    document.getElementById('lock-btn').onclick = () => { overlay.classList.remove('hidden'); overlay.classList.add('flex'); };
+    document.getElementById('private-backdrop').onclick = () => { overlay.classList.add('hidden'); overlay.classList.remove('flex'); };
 
-    fillMarquee('marquee-row-1', TECH_ROW_1);
-    fillMarquee('marquee-row-2', TECH_ROW_2);
-
-
-    /* ==================================================================
-       TAILSCALE PANEL RENDERING
-       Builds the list of private server links with copy-URL buttons.
-       ================================================================== */
-
-    function renderPrivateLinks() {
-      const list = document.getElementById('tailscale-list');
-      if (!list) return;
-      list.innerHTML = PRIVATE_LINKS.map(link => `
-        <li class="flex items-center justify-between gap-3 bg-white/60 rounded-xl px-5 py-3.5 border border-barbie/8 shadow-sm hover:shadow-card transition-shadow duration-200">
-          <div class="min-w-0">
-            <a href="${link.url}" target="_blank" rel="noopener noreferrer"
-               class="font-semibold text-sm text-ink hover:text-barbie transition-colors duration-200 block truncate">${link.name}</a>
-            <span class="text-xs text-ink-faint">${link.desc}</span>
-          </div>
-          <button onclick="copyUrl('${link.url}', this)"
-                  class="flex-shrink-0 w-8 h-8 rounded-lg bg-barbie-faint/30 flex items-center justify-center text-barbie/40 hover:text-barbie hover:bg-barbie-faint transition-all duration-200"
-                  aria-label="Copy URL for ${link.name}"
-                  title="Copy URL">
-            <svg class="w-4 h-4 copy-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3a2.25 2.25 0 00-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/>
-            </svg>
-            <svg class="w-4 h-4 check-icon hidden text-sage" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
-            </svg>
-          </button>
-        </li>
-      `).join('');
-    }
-
-    renderPrivateLinks();
-
-    function copyUrl(url, btn) {
-      navigator.clipboard.writeText(url).then(() => {
-        const copyIcon  = btn.querySelector('.copy-icon');
-        const checkIcon = btn.querySelector('.check-icon');
-        copyIcon.classList.add('hidden');
-        checkIcon.classList.remove('hidden');
-        setTimeout(() => {
-          copyIcon.classList.remove('hidden');
-          checkIcon.classList.add('hidden');
-        }, 1500);
-      });
-    }
-
-
-    /* ==================================================================
-       PRIVATE PANEL — Open / Close
-       Opens on lock icon click.
-       Closes on X button, Escape key, or clicking the backdrop.
-       ================================================================== */
-
-    const overlay  = document.getElementById('private-overlay');
-    const backdrop = document.getElementById('private-backdrop');
-    const lockBtn  = document.getElementById('lock-btn');
-    const closeBtn = document.getElementById('private-close');
-
-    function openPanel() {
-      overlay.classList.remove('hidden');
-      overlay.classList.add('flex');
-      closeBtn.focus();
-    }
-
-    function closePanel() {
-      overlay.classList.add('hidden');
-      overlay.classList.remove('flex');
-      lockBtn.focus();
-    }
-
-    lockBtn.addEventListener('click', openPanel);
-    closeBtn.addEventListener('click', closePanel);
-    backdrop.addEventListener('click', closePanel);
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closePanel();
-    });
-
-
-    /* ==================================================================
-       SCROLL REVEAL — IntersectionObserver
-       Elements with .reveal class start at opacity 0.01 and translateY(20px).
-       When they enter the viewport (12% visible), they transition to full
-       opacity and position. Stagger delays are handled via CSS classes.
-       Each element is only revealed once (unobserved after).
-       ================================================================== */
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
+    // Subtle Sparkle Interaction on links
+    document.addEventListener('mousemove', e => {
+      if(e.target.closest('a') || e.target.closest('button')) {
+        if(Math.random() > 0.8) {
+          const s = document.createElement('div');
+          s.className = 'sparkle';
+          s.style.left = e.pageX + 'px';
+          s.style.top = e.pageY + 'px';
+          document.body.appendChild(s);
+          setTimeout(() => { s.style.transform = 'translate(-50%, -150%) scale(0)'; s.style.opacity = '0'; }, 50);
+          setTimeout(() => s.remove(), 550);
         }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-
-    /* ==================================================================
-       NAV — Frosted glass background on scroll
-       Adds backdrop-blur and white bg when scrolled past 60px.
-       Also highlights the currently visible section in the nav.
-       ================================================================== */
-
-    const nav = document.getElementById('site-nav');
-
-    function updateNav() {
-      if (window.scrollY > 60) {
-        nav.classList.add('bg-white/80', 'backdrop-blur-xl', 'shadow-nav', 'border-b', 'border-ink/5');
-      } else {
-        nav.classList.remove('bg-white/80', 'backdrop-blur-xl', 'shadow-nav', 'border-b', 'border-ink/5');
       }
-    }
-
-    window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav(); /* Run on load in case page is already scrolled */
-
-    /* Active section highlighting in nav */
-    const navLinks = document.querySelectorAll('[data-nav]');
-    const sections = ['story', 'values', 'projects', 'tech']
-      .map(id => document.getElementById(id))
-      .filter(Boolean);
-
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(l => l.classList.remove('active', 'text-barbie'));
-          const active = document.querySelector(`[data-nav][href="#${entry.target.id}"]`);
-          if (active) {
-            active.classList.add('active', 'text-barbie');
-          }
-        }
-      });
-    }, { rootMargin: '-30% 0px -50% 0px', threshold: 0.1 });
-
-    sections.forEach(s => sectionObserver.observe(s));
-
-
-    /* ==================================================================
-       MOBILE MENU — Toggle hamburger
-       ================================================================== */
-
-    const mobileBtn  = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileBtn.addEventListener('click', () => {
-      const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
-      mobileBtn.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    /* Close mobile menu when a link is clicked */
-    document.querySelectorAll('[data-nav-mobile]').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileBtn.setAttribute('aria-expanded', 'false');
-      });
     });
   </script>
-
 </body>
 </html>
