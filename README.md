@@ -1,6 +1,6 @@
 # AshleyDenham.me
 
-Personal home page for **Ashley Denham** — Adelaide, Australia.
+Personal homepage for **Ashley Denham**.
 
 ## Live Site
 
@@ -8,45 +8,60 @@ Personal home page for **Ashley Denham** — Adelaide, Australia.
 
 ## Stack
 
-- **Tailwind CSS 3** via CDN — zero build step
-- **DM Sans** + **Playfair Display** (Google Fonts)
-- **Pure vanilla JS** — IntersectionObserver scroll reveals, marquee, glassmorphic private panel
-- **GitHub Pages** — hosting with custom domain
+- Single-file static HTML (`index.html`)
+- Custom CSS (no build step, no framework dependency)
+- Vanilla JavaScript for data rendering and UI interactions
+- GitHub Pages hosting from `main`
 
-## Structure
+## Project Structure
 
 ```
-├── index.html      # Single-page portfolio with integrated private panel
-├── 404.html        # Custom 404 page
-├── avatar.jpg      # Profile photo
-├── CNAME           # Custom domain config
-└── .github/
-    └── workflows/
-        └── jekyll-gh-pages.yml
+|-- index.html      # Homepage with all sections, styles, and JS data blocks
+|-- 404.html        # Custom 404 page
+|-- avatar.jpg      # Profile photo
+|-- CNAME           # Custom domain config
+`-- .github/
+    `-- workflows/
+        `-- jekyll-gh-pages.yml
 ```
 
-## Quick Edit Guide
+## Homepage Sections (top to bottom)
 
-All editable content is at the top of the `<script>` block in `index.html`:
+1. Hero (photo + name)
+2. Social buttons
+3. Projects
+4. IT credentials featured wheel
+5. Coding languages wheel
+6. Expandable full IT credential catalog
+7. Non-IT qualifications
+8. Previous careers
+9. Footer
 
-- **`TECH_ROW_1` / `TECH_ROW_2`** — tech badge marquee labels
-- **`PRIVATE_LINKS`** — Tailscale server links (shown via lock icon)
-- **Story text** — edit the `#story` section HTML directly
-- **Projects** — edit or copy/paste project card blocks in `#projects`
-- **Avatar** — replace `avatar.jpg` with your photo (square, <200KB)
+## Editable Content Blocks
+
+At the top of the `<script>` block in `index.html`:
+
+- `SOCIAL_LINKS`
+  - fields: `label`, `url`, `enabled`
+- `PROJECTS`
+  - fields: `name`, `url`, `summary`
+- `IT_CREDENTIALS`
+  - fields: `id`, `title`, `issuer`, `category`, `status`, `url`, `summary`, `iconKey`
+- `LANGUAGE_BADGES`
+  - fields: `name`, `url`, `summary`, `iconKey`
+- `IT_BADGE_FEATURED_ORDER`
+  - array of credential `id` values used in the featured auto-scroll wheel
+
+## Interaction Notes
+
+- Badge wheels auto-scroll horizontally and pause on hover/focus.
+- "View all IT credentials" expands/collapses the full categorized catalog.
+- LinkedIn button is intentionally set as a placeholder (`enabled: false`) until the final profile URL is added.
 
 ## Deployment
 
-Hosted via GitHub Pages from the `main` branch root. DNS configured with:
-
-| Type  | Name | Value                        |
-|-------|------|------------------------------|
-| A     | @    | 185.199.108.153              |
-| A     | @    | 185.199.109.153              |
-| A     | @    | 185.199.110.153              |
-| A     | @    | 185.199.111.153              |
-| CNAME | www  | ashleydenham.github.io       |
+This site is deployed by GitHub Pages from the root of the `main` branch.
 
 ## License
 
-© 2026 Ashley Denham. All rights reserved.
+(c) 2026 Ashley Denham. All rights reserved.

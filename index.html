@@ -1,252 +1,1057 @@
 <!DOCTYPE html>
-<html lang="en-AU" class="scroll-smooth">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ashley Denham — Adelaide, Australia</title>
-  <meta name="description" content="Ashley Denham — nursing background, now exploring AI, tech, and legal training in Adelaide.">
-  <meta name="theme-color" content="#FAF5F8">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            barbie:   '#E0218A',
-            'barbie-light': '#F5A3D0',
-            'barbie-faint': '#FDE8F3',
-            cream:    '#FAF5F8',
-            ink:      '#111827',
-            'ink-soft': '#4B5563',
-            'ink-faint': '#9CA3AF',
-            sage:     '#10B981',
-          },
-          fontFamily: {
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-          },
-          boxShadow: {
-            'neu':       '8px 8px 16px rgba(180,160,175,0.15), -8px -8px 16px rgba(255,255,255,0.8)',
-            'neu-hover': '10px 10px 24px rgba(180,160,175,0.2), -10px -10px 24px rgba(255,255,255,0.9), 0 0 20px rgba(224,33,138,0.05)',
-            'glass':     '0 8px 32px rgba(224,33,138,0.15), 0 0 0 1px rgba(224,33,138,0.1)',
-          },
-          animation: {
-            'draw-in':     'drawIn 1.5s cubic-bezier(0.22,1,0.36,1) 0.5s both',
-            'pulse-soft':  'pulseSoft 4s ease-in-out infinite',
-            'marquee':     'marquee var(--duration, 40s) linear infinite',
-            'marquee-rev': 'marqueeRev var(--duration, 45s) linear infinite',
-            'float':       'float 7s ease-in-out infinite',
-            'panel-in':    'panelIn 0.4s cubic-bezier(0.22,1,0.36,1) both',
-          },
-          keyframes: {
-            drawIn: { '0%': { transform: 'scaleX(0)' }, '100%': { transform: 'scaleX(1)' } },
-            pulseSoft: { '0%, 100%': { transform: 'scale(1)', opacity: '0.6' }, '50%': { transform: 'scale(1.08)', opacity: '0.9' } },
-            marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
-            marqueeRev: { '0%': { transform: 'translateX(-50%)' }, '100%': { transform: 'translateX(0)' } },
-            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
-            panelIn: { '0%': { opacity: '0', transform: 'scale(0.95) translateY(15px)' }, '100%': { opacity: '1', transform: 'scale(1) translateY(0)' } },
-          },
-        }
-      }
-    };
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-
+  <title>Ashley Denham - Adelaide, Australia</title>
+  <meta name="description" content="Ashley Denham - AI and technology learning, projects, qualifications, and professional background.">
+  <meta name="theme-color" content="#f8f2f7">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f7a8d2'/%3E%3Cstop offset='1' stop-color='%23e0218a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='3' y='3' width='58' height='58' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3EA%3C/text%3E%3C/svg%3E">
   <style>
+    :root {
+      --bg-1: #f8f2f7;
+      --bg-2: #fff8fc;
+      --bg-3: #f9eef6;
+      --card: rgba(255, 255, 255, 0.76);
+      --card-border: rgba(224, 33, 138, 0.12);
+      --ink: #17161b;
+      --ink-soft: #4f4550;
+      --ink-faint: #7a6e7a;
+      --accent: #e0218a;
+      --accent-soft: #f6b6da;
+      --focus: #b6006a;
+      --shadow-soft: 0 22px 60px rgba(70, 34, 67, 0.14);
+      --shadow-card: 0 16px 40px rgba(84, 40, 80, 0.13);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --space-1: 0.5rem;
+      --space-2: 0.75rem;
+      --space-3: 1rem;
+      --space-4: 1.5rem;
+      --space-5: 2rem;
+      --space-6: 2.5rem;
+      --space-7: 3.5rem;
+      --max-width: 980px;
+      --font-sans: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
     body {
-      background: linear-gradient(180deg, #FAF5F8 0%, #FDF9FB 50%, #FAF5F8 100%);
-      -webkit-font-smoothing: antialiased;
-      cursor: auto;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Subtle Adelaide Skyline Hint */
-    .hero-bg {
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(240, 119, 189, 0.16), transparent 44%),
+        radial-gradient(circle at 86% 0%, rgba(224, 33, 138, 0.08), transparent 40%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2) 50%, var(--bg-3));
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max-width), 92vw);
+      margin: 0 auto;
+      padding: var(--space-6) 0 var(--space-7);
+      display: grid;
+      gap: var(--space-5);
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      padding: clamp(1.2rem, 2.6vw, 2rem);
+      overflow: hidden;
+    }
+
+    .hero {
+      display: grid;
+      gap: var(--space-4);
+      justify-items: center;
+      text-align: center;
+      animation: rise-in 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .avatar-wrap {
+      width: clamp(116px, 18vw, 152px);
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      padding: 4px;
+      background: linear-gradient(145deg, rgba(224, 33, 138, 0.22), rgba(255, 255, 255, 0.95));
+      box-shadow: 0 10px 35px rgba(176, 20, 112, 0.24);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: -0.03em;
+      line-height: 1.06;
+    }
+
+    .subtle {
+      margin: 0;
+      max-width: 58ch;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 2.2vw, 1.1rem);
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 0.25rem;
+    }
+
+    .pill {
+      border: 1px solid rgba(176, 38, 117, 0.2);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #2c2430;
+      padding: 0.56rem 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.93rem;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      box-shadow: 0 6px 18px rgba(149, 57, 116, 0.08);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+    }
+
+    .pill:hover,
+    .pill:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(224, 33, 138, 0.45);
+      box-shadow: 0 10px 24px rgba(164, 36, 114, 0.16);
+      background: #ffffff;
+    }
+
+    .pill[aria-disabled="true"] {
+      color: var(--ink-faint);
+      border-style: dashed;
+      cursor: not-allowed;
+      opacity: 0.85;
+    }
+
+    .pill[aria-disabled="true"]:hover,
+    .pill[aria-disabled="true"]:focus-visible {
+      transform: none;
+      border-color: rgba(176, 38, 117, 0.2);
+      box-shadow: 0 6px 18px rgba(149, 57, 116, 0.08);
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: var(--space-3);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 1.9rem);
+      letter-spacing: -0.02em;
+      line-height: 1.16;
+    }
+
+    .section-kicker {
+      margin: 0;
+      color: var(--ink-faint);
+      font-size: 0.92rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-3);
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(151, 66, 116, 0.15);
+      padding: var(--space-4);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+      min-height: 156px;
+      display: grid;
+      align-content: start;
+      gap: 0.55rem;
+    }
+
+    .project-card:hover,
+    .project-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(224, 33, 138, 0.34);
+      box-shadow: 0 14px 32px rgba(151, 50, 112, 0.16);
+    }
+
+    .project-card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    .project-card .project-link {
+      margin-top: 0.2rem;
+      color: #903068;
+      font-weight: 600;
+      font-size: 0.89rem;
+    }
+
+    .wheel-wrap {
+      position: relative;
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(158, 72, 126, 0.18);
+      background: rgba(255, 255, 255, 0.66);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+
+    .wheel-track {
+      display: flex;
+      width: max-content;
+      animation: wheel var(--duration, 40s) linear infinite;
+      padding: 0.9rem;
+      gap: 0;
+      will-change: transform;
+    }
+
+    .wheel-group {
+      display: flex;
+      gap: 0.8rem;
+      padding-right: 0.8rem;
+      min-width: max-content;
+    }
+
+    .wheel-wrap:hover .wheel-track,
+    .wheel-wrap:focus-within .wheel-track {
+      animation-play-state: paused;
+    }
+
+    .badge-card,
+    .language-card {
+      display: grid;
+      align-content: start;
+      gap: 0.48rem;
+      min-height: 132px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(157, 79, 129, 0.2);
+      background: rgba(255, 255, 255, 0.94);
+      padding: 0.82rem;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+    }
+
+    .badge-card {
+      width: 278px;
+    }
+
+    .language-card {
+      width: 210px;
+      min-height: 104px;
+      justify-content: center;
+    }
+
+    .badge-card:hover,
+    .badge-card:focus-visible,
+    .language-card:hover,
+    .language-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(224, 33, 138, 0.35);
+      box-shadow: 0 10px 25px rgba(146, 47, 108, 0.19);
+    }
+
+    .badge-top,
+    .language-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+
+    .status-chip {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 0.2rem 0.58rem;
+      border: 1px solid rgba(189, 91, 143, 0.3);
+      background: rgba(249, 230, 241, 0.82);
+      color: #883664;
+      white-space: nowrap;
+    }
+
+    .status-chip.status-undertaking {
+      background: rgba(255, 237, 193, 0.68);
+      border-color: rgba(205, 137, 28, 0.38);
+      color: #8d5a12;
+    }
+
+    .status-chip.status-skill {
+      background: rgba(234, 238, 255, 0.8);
+      border-color: rgba(99, 118, 196, 0.31);
+      color: #324493;
+    }
+
+    .badge-title,
+    .language-title {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    .badge-title {
+      min-height: 2.5em;
+    }
+
+    .badge-summary,
+    .language-summary {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .badge-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 34px;
+      border: 1px solid rgba(121, 60, 106, 0.25);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .toggle-btn {
+      margin-top: 1rem;
+      border: 1px solid rgba(162, 64, 128, 0.25);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      color: #6d2e56;
+      padding: 0.55rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color 170ms ease, box-shadow 170ms ease;
+    }
+
+    .toggle-btn:hover,
+    .toggle-btn:focus-visible {
+      border-color: rgba(224, 33, 138, 0.45);
+      box-shadow: 0 10px 24px rgba(154, 43, 112, 0.16);
+    }
+
+    .catalog {
+      margin-top: 1rem;
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .catalog-group {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .catalog-group h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #6e2f58;
+      letter-spacing: -0.01em;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.85rem;
+    }
+
+    .catalog-item {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(159, 76, 128, 0.2);
+      border-radius: var(--radius-md);
+      padding: 0.9rem;
+      display: grid;
+      gap: 0.48rem;
+    }
+
+    .catalog-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+
+    .catalog-item-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 0;
+    }
+
+    .catalog-item h4 {
+      margin: 0;
+      font-size: 0.93rem;
+      line-height: 1.35;
+    }
+
+    .issuer {
+      font-size: 0.79rem;
+      color: var(--ink-faint);
+      margin: 0;
+    }
+
+    .catalog-item p {
+      margin: 0;
+      font-size: 0.83rem;
+      color: var(--ink-soft);
+      line-height: 1.42;
+    }
+
+    .catalog-item a {
+      justify-self: start;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #8f2c64;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(143, 44, 100, 0.25);
+    }
+
+    .catalog-item a:hover,
+    .catalog-item a:focus-visible {
+      border-bottom-color: currentColor;
+    }
+
+    .simple-list {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .simple-list li {
+      color: #332c35;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--ink-faint);
+      font-size: 0.87rem;
+      padding-bottom: 0.9rem;
+    }
+
+    .sr-only {
       position: absolute;
-      inset: 0;
-      opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20L5 15L10 20L15 10L20 20L30 5L40 20L50 15L60 20L70 8L80 20L90 12L100 20' fill='none' stroke='%23E0218A' stroke-width='0.5'/%3E%3C/svg%3E");
-      background-size: 200px;
-      background-position: bottom;
-      background-repeat: repeat-x;
-      pointer-events: none;
-      z-index: 0;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22,1,0.36,1); }
-    .reveal.is-visible { opacity: 1; transform: translateY(0); }
-    .underline-draw { transform-origin: left; transform: scaleX(0); }
-    .underline-draw.drawn { animation: drawIn 1.5s cubic-bezier(0.22,1,0.36,1) forwards; }
-
-    .marquee-track { display: flex; width: max-content; }
-    .marquee-row:hover .marquee-track { animation-play-state: paused !important; }
-
-    .card-lift { transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s cubic-bezier(0.22,1,0.36,1); }
-    .card-lift:hover { transform: translateY(-4px) scale(1.015); }
-
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(30px) saturate(1.5);
-      -webkit-backdrop-filter: blur(30px) saturate(1.5);
+    :focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
     }
 
-    /* Magical Cursor Sparkles */
-    .sparkle {
-      position: fixed;
-      width: 6px;
-      height: 6px;
-      background: #E0218A;
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0.6;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      z-index: 9999;
+    @keyframes wheel {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
     }
 
-    @media print {
-      nav, .marquee-row, #lock-btn, #private-overlay { display: none !important; }
-      body { background: #fff !important; }
+    @keyframes rise-in {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(var(--max-width), 94vw);
+        gap: 1rem;
+        padding-top: 1rem;
+      }
+
+      .panel {
+        border-radius: 22px;
+      }
+
+      .badge-card {
+        width: 240px;
+      }
+
+      .language-card {
+        width: 180px;
+      }
+
+      .project-card {
+        min-height: 144px;
+      }
+
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
+<body>
+  <main class="container">
+    <header class="panel hero" id="top">
+      <div class="avatar-wrap">
+        <img class="avatar" src="avatar.jpg" alt="Ashley Denham profile photo">
+      </div>
+      <h1>Ashley Denham</h1>
+      <p class="subtle">AI and technology learning, projects, and professional background from Adelaide, Australia.</p>
+      <nav aria-label="Social links" class="social-row" id="social-links"></nav>
+    </header>
 
-<body class="font-sans text-ink leading-relaxed overflow-x-hidden relative">
+    <section class="panel" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">Projects</h2>
+      </div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
 
-  <nav id="site-nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-4 px-6 flex justify-between items-center max-w-5xl mx-auto">
-    <a href="#top" class="font-serif font-bold text-lg text-ink group flex items-center gap-2">
-      Ashley Denham
-      <span class="w-1.5 h-1.5 rounded-full bg-barbie group-hover:scale-150 transition-transform"></span>
-    </a>
-    <ul class="hidden sm:flex gap-8 text-sm font-medium text-ink-soft">
-      <li><a href="#story" class="hover:text-barbie transition-colors">Story</a></li>
-      <li><a href="#care" class="hover:text-barbie transition-colors">Care About</a></li>
-      <li><a href="#projects" class="hover:text-barbie transition-colors">Projects</a></li>
-      <li><a href="#tech" class="hover:text-barbie transition-colors">Tech</a></li>
-    </ul>
-  </nav>
+    <section class="panel" aria-labelledby="it-credentials-title">
+      <div class="section-head">
+        <h2 id="it-credentials-title">IT Degrees and Certifications</h2>
+        <p class="section-kicker">Featured credentials</p>
+      </div>
+      <div class="wheel-wrap" aria-label="Featured IT credentials" id="it-wheel-wrap">
+        <div class="wheel-track" id="it-wheel-track"></div>
+      </div>
 
-  <main>
-    <section id="top" class="min-h-screen flex flex-col items-center justify-center px-5 relative overflow-hidden">
-      <div class="hero-bg"></div>
-      <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="mb-10 animate-float">
-          <div class="relative">
-            <div class="absolute -inset-4 rounded-full bg-barbie-faint blur-2xl animate-pulse-soft"></div>
-            <img src="avatar.jpg" alt="Ashley Denham" class="relative w-40 h-40 rounded-full object-cover shadow-neu border-4 border-white">
-          </div>
-        </div>
-        <h1 class="font-serif text-5xl sm:text-7xl font-bold text-ink tracking-tight">Ashley Denham</h1>
-        <div class="w-24 h-1 mt-4 mb-8 relative mx-auto">
-          <div class="underline-draw absolute inset-0 rounded-full bg-gradient-to-r from-barbie via-barbie-light to-barbie"></div>
-        </div>
-        <p class="text-xl text-ink-soft max-w-lg leading-relaxed">
-          Nursing background, now exploring AI & tech, studying law, and figuring it out from Adelaide.
-        </p>
+      <button type="button" class="toggle-btn" id="catalog-toggle" aria-expanded="false" aria-controls="credential-catalog">
+        View all IT credentials
+      </button>
+      <div id="credential-catalog" class="catalog" hidden></div>
+    </section>
+
+    <section class="panel" aria-labelledby="languages-title">
+      <div class="section-head">
+        <h2 id="languages-title">Coding Languages I Know</h2>
+        <p class="section-kicker">Skills wheel</p>
+      </div>
+      <div class="wheel-wrap" aria-label="Coding language badges" id="language-wheel-wrap">
+        <div class="wheel-track" id="language-wheel-track"></div>
       </div>
     </section>
 
-    <section id="story" class="py-32 px-5">
-      <div class="max-w-2xl mx-auto reveal">
-        <h2 class="font-serif text-4xl font-bold text-ink mb-3">My Story</h2>
-        <div class="w-12 h-1 bg-barbie/30 rounded-full mb-10"></div>
-        <div class="space-y-6 text-lg text-ink-soft leading-loose">
-          <p>Hey — I'm Ashley. I'm based in Adelaide, South Australia, and for the past few years I worked as a registered nurse, mostly in aged care. I loved the people. I learned a lot about patience, leadership, and showing up when things are hard.</p>
-          <p>But I've taken a break from nursing to focus on AI and tech, and undertake legal training (JD). It's been a big shift — some days exciting, some days humbling. I'm learning to code, tinkering with electronics, studying how large language models work, and slowly building things I find interesting.</p>
-          <p>I don't have all the answers figured out yet, and that's okay. I'm drawn to the intersection of technology and care — how we can use these tools to genuinely help people, not just move fast. I started Hamily Holdings as a home for the projects and ideas I'm working on.</p>
-          <p>This little corner of the internet is where I share what I'm up to. Thanks for stopping by.</p>
-        </div>
+    <section class="panel" aria-labelledby="non-it-title">
+      <div class="section-head">
+        <h2 id="non-it-title">Non-IT Qualifications</h2>
       </div>
+      <ul class="simple-list">
+        <li>Juris Doctor (undertaking), Flinders University</li>
+        <li>Master of Business Administration, University of Adelaide</li>
+        <li>Master of Nursing (Gerontology), University of Tasmania</li>
+        <li>Graduate Diploma in Nursing (Gerontology)</li>
+        <li>Graduate Certificate in Nursing (Gerontology)</li>
+        <li>Bachelor of Science (Nursing), University of South Australia</li>
+        <li>Dare to Lead training</li>
+        <li>Bachelor of Laws, University of South Australia</li>
+        <li>Certificate III in Individual Support (Ageing)</li>
+      </ul>
     </section>
 
-    <section id="care" class="py-32 px-5 relative">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-16 reveal">
-          <h2 class="font-serif text-4xl font-bold text-ink mb-3">What I Care About</h2>
-          <div class="w-12 h-1 bg-barbie/30 rounded-full mx-auto"></div>
-        </div>
-        <div class="grid sm:grid-cols-3 gap-8">
-          <div class="reveal card-lift bg-white/70 rounded-[2rem] p-8 shadow-neu text-center border border-white">
-            <h3 class="font-serif text-2xl font-bold text-ink mb-3 mt-4">Learning</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Always a student. Right now it's AI, law, and figuring out how they overlap. I love the feeling of not knowing something yet.</p>
-          </div>
-          <div class="reveal card-lift bg-white/70 rounded-[2rem] p-8 shadow-neu text-center border border-white" style="transition-delay: 0.1s">
-            <h3 class="font-serif text-2xl font-bold text-ink mb-3 mt-4">Electronics</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Arduino, Raspberry Pi, blinking LEDs at 2am. There's something grounding about building physical things with your hands.</p>
-          </div>
-          <div class="reveal card-lift bg-white/70 rounded-[2rem] p-8 shadow-neu text-center border border-white" style="transition-delay: 0.2s">
-            <h3 class="font-serif text-2xl font-bold text-ink mb-3 mt-4">Family</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Everything I do comes back to Brad, our dogs Fred and Barney, and the people I love. They're my grounding force and biggest supporters.</p>
-          </div>
-        </div>
+    <section class="panel" aria-labelledby="careers-title">
+      <div class="section-head">
+        <h2 id="careers-title">Previous Careers</h2>
       </div>
+      <ul class="simple-list">
+        <li>Director of Nursing for a large South Australian RACF</li>
+        <li>Gerontological nursing research</li>
+        <li>Clinical Nurse Consultant (Aged Care)</li>
+        <li>Completed graduate programs in Anaesthetics and Recovery Nursing, and Gerontological Nursing</li>
+        <li>Carer (Aged Care)</li>
+      </ul>
     </section>
 
-    <section id="tech" class="py-24 overflow-hidden">
-      <div class="marquee-row mb-6 reveal"><div class="marquee-track animate-marquee" id="mq1"></div></div>
-      <div class="marquee-row reveal"><div class="marquee-track animate-marquee-rev" id="mq2"></div></div>
-    </section>
+    <footer class="footer">
+      <span id="footer-year"></span> Ashley Denham
+    </footer>
   </main>
 
-  <footer class="py-16 text-center text-sm text-ink-faint">
-    &copy; 2026 Ashley Denham
-    <button id="lock-btn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/80 backdrop-blur shadow-neu hover:shadow-neu-hover flex items-center justify-center transition-all group">
-      <svg class="w-5 h-5 text-barbie/50 group-hover:text-barbie animate-pulse-soft" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
-    </button>
-  </footer>
-
-  <div id="private-overlay" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
-    <div id="private-backdrop" class="absolute inset-0 bg-ink/10 backdrop-blur-md"></div>
-    <div class="relative glass-panel rounded-[2rem] shadow-glass max-w-sm w-full p-8 animate-panel-in border border-white/40">
-      <h3 class="font-serif text-2xl font-bold text-ink mb-6">Home Servers</h3>
-      <ul id="tailscale-list" class="space-y-4"></ul>
-    </div>
-  </div>
-
   <script>
-    const TECH_ROW_1 = ['Python', 'JavaScript', 'Tailscale', 'YubiKey', 'Arduino', 'Raspberry Pi', 'Docker', 'PostgreSQL'];
-    const TECH_ROW_2 = ['PyTorch', 'Grafana', 'Tailwind', 'Node.js', 'Claude AI', 'Hugging Face', 'FastAPI'];
-    const PRIVATE_LINKS = [
-      { name: 'Tailscale Admin', url: 'https://login.tailscale.com/admin' },
-      { name: 'AI Server', url: 'http://ai-srv.tailnet:8080' }
+    // Editable content blocks
+    const SOCIAL_LINKS = [
+      { label: 'GitHub', url: 'https://github.com/ashleydenham', enabled: true },
+      { label: 'X', url: 'https://x.com/AshleyDenham', enabled: true },
+      { label: 'Twitter', url: 'https://twitter.com/AshleyDenham', enabled: true },
+      { label: 'LinkedIn', url: '#', enabled: false }
     ];
 
-    const renderBadge = l => `<span class="inline-flex px-6 py-3 mx-3 rounded-full bg-white/50 shadow-sm text-sm text-ink-soft border border-white hover:text-barbie hover:border-barbie/30 transition-all cursor-default">${l}</span>`;
-    document.getElementById('mq1').innerHTML = TECH_ROW_1.map(renderBadge).join('').repeat(2);
-    document.getElementById('mq2').innerHTML = TECH_ROW_2.map(renderBadge).join('').repeat(2);
-
-    document.getElementById('tailscale-list').innerHTML = PRIVATE_LINKS.map(l => `
-      <li class="flex justify-between items-center p-4 bg-white/40 rounded-xl border border-white hover:border-barbie/20 transition-all">
-        <a href="${l.url}" class="font-medium text-ink hover:text-barbie text-sm">${l.name}</a>
-      </li>
-    `).join('');
-
-    // Interactions
-    const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('is-visible'); }));
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-    window.onload = () => document.querySelector('.underline-draw').classList.add('drawn');
-
-    const overlay = document.getElementById('private-overlay');
-    document.getElementById('lock-btn').onclick = () => { overlay.classList.remove('hidden'); overlay.classList.add('flex'); };
-    document.getElementById('private-backdrop').onclick = () => { overlay.classList.add('hidden'); overlay.classList.remove('flex'); };
-
-    // Subtle Sparkle Interaction on links
-    document.addEventListener('mousemove', e => {
-      if(e.target.closest('a') || e.target.closest('button')) {
-        if(Math.random() > 0.8) {
-          const s = document.createElement('div');
-          s.className = 'sparkle';
-          s.style.left = e.pageX + 'px';
-          s.style.top = e.pageY + 'px';
-          document.body.appendChild(s);
-          setTimeout(() => { s.style.transform = 'translate(-50%, -150%) scale(0)'; s.style.opacity = '0'; }, 50);
-          setTimeout(() => s.remove(), 550);
-        }
+    const PROJECTS = [
+      {
+        name: 'AshleyDenham',
+        url: 'https://github.com/ashleydenham/AshleyDenham',
+        summary: 'Personal website and profile source.'
+      },
+      {
+        name: 'Automate-Adelaide',
+        url: 'https://github.com/ashleydenham/Automate-Adelaide',
+        summary: 'Website for Automate Adelaide.'
       }
-    });
+    ];
+
+    const IT_CREDENTIALS = [
+      {
+        id: 'stanford-ai-gc',
+        title: 'Stanford Artificial Intelligence Graduate Certificate',
+        issuer: 'Stanford Online',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Undertaking',
+        url: 'https://online.stanford.edu/programs/artificial-intelligence-graduate-certificate',
+        summary: 'Graduate-level AI certificate covering ML, NLP, robotics, and ethics.',
+        iconKey: 'stanford'
+      },
+      {
+        id: 'mit-ml-ai-cert',
+        title: 'MIT Professional Certificate Program in Machine Learning and Artificial Intelligence',
+        issuer: 'MIT Professional Education',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Undertaking',
+        url: 'https://professional.mit.edu/course-catalog/professional-certificate-program-machine-learning-artificial-intelligence',
+        summary: 'Rigorous professional program in ML algorithms, deep learning, and AI applications.',
+        iconKey: 'mit'
+      },
+      {
+        id: 'gcp-ml-engineer',
+        title: 'Google Cloud Professional Machine Learning Engineer',
+        issuer: 'Google Cloud',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://cloud.google.com/learn/certification/machine-learning-engineer',
+        summary: 'Production ML design, deployment, and scaling on GCP and Vertex AI.',
+        iconKey: 'google-cloud'
+      },
+      {
+        id: 'ml-specialization-andrew-ng',
+        title: 'Machine Learning Specialization (Andrew Ng, Stanford + DeepLearning.AI)',
+        issuer: 'Coursera',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://www.coursera.org/specializations/machine-learning-introduction',
+        summary: 'Foundational and advanced ML specialization with a strong industry profile.',
+        iconKey: 'coursera'
+      },
+      {
+        id: 'azure-ai-engineer',
+        title: 'Microsoft Certified: Azure AI Engineer Associate (AI-102)',
+        issuer: 'Microsoft',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer',
+        summary: 'Builds and deploys AI solutions across Azure Cognitive and generative services.',
+        iconKey: 'microsoft'
+      },
+      {
+        id: 'ibm-ai-engineering',
+        title: 'IBM AI Engineering Professional Certificate',
+        issuer: 'Coursera',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://www.coursera.org/professional-certificates/ibm-ai-engineering',
+        summary: 'Hands-on deep learning and scalable ML engineering with PyTorch workflows.',
+        iconKey: 'ibm'
+      },
+      {
+        id: 'gcp-data-engineer',
+        title: 'Google Cloud Professional Data Engineer',
+        issuer: 'Google Cloud',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://cloud.google.com/learn/certification/data-engineer',
+        summary: 'Data pipelines and infrastructure skills often paired with ML engineering.',
+        iconKey: 'google-cloud'
+      },
+      {
+        id: 'aws-ml-specialty',
+        title: 'AWS Certified Machine Learning - Specialty',
+        issuer: 'AWS',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://aws.amazon.com/certification/certified-machine-learning-specialty/',
+        summary: 'Enterprise-level AWS ML capability with SageMaker and deployment focus.',
+        iconKey: 'aws'
+      },
+      {
+        id: 'deeplearningai-courses',
+        title: 'DeepLearning.AI Short Courses and Specializations',
+        issuer: 'DeepLearning.AI',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://www.deeplearning.ai/courses/',
+        summary: 'Applied short courses in generative AI, LLM tooling, and modern workflows.',
+        iconKey: 'deeplearningai'
+      },
+      {
+        id: 'databricks-genai-assoc',
+        title: 'Databricks Certified Generative AI Engineer Associate',
+        issuer: 'Databricks',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://www.databricks.com/learn/certification/genai-engineer-associate',
+        summary: 'GenAI engineering focused on scalable LLM workloads in Databricks.',
+        iconKey: 'databricks'
+      },
+      {
+        id: 'nvidia-dli',
+        title: 'NVIDIA Deep Learning Institute Certifications',
+        issuer: 'NVIDIA',
+        category: 'AI / ML Degrees and Certifications',
+        status: 'Listed',
+        url: 'https://www.nvidia.com/en-us/training/',
+        summary: 'GPU-accelerated AI and deep learning training for high-performance computing.',
+        iconKey: 'nvidia'
+      },
+      {
+        id: 'arduino-certification',
+        title: 'Arduino Certification',
+        issuer: 'Arduino',
+        category: 'Arduino and Raspberry Pi',
+        status: 'Listed',
+        url: 'https://www.arduino.cc/education/certification',
+        summary: 'Official certification for Arduino electronics and physical computing skills.',
+        iconKey: 'arduino'
+      },
+      {
+        id: 'arduino-junior-certification',
+        title: 'Arduino Junior Certification',
+        issuer: 'Arduino',
+        category: 'Arduino and Raspberry Pi',
+        status: 'Listed',
+        url: 'https://www.arduino.cc/education/certifications',
+        summary: 'Entry-level Arduino credential for core electronics and programming concepts.',
+        iconKey: 'arduino'
+      },
+      {
+        id: 'raspberry-pi-specialization',
+        title: 'Raspberry Pi Projects Specialization (Johns Hopkins, Coursera)',
+        issuer: 'Coursera',
+        category: 'Arduino and Raspberry Pi',
+        status: 'Listed',
+        url: 'https://www.coursera.org/specializations/raspberry-pi',
+        summary: 'University-backed Raspberry Pi projects with hardware interfacing and Python.',
+        iconKey: 'raspberry-pi'
+      }
+    ];
+
+    const LANGUAGE_BADGES = [
+      {
+        name: 'Python',
+        url: 'https://www.python.org/',
+        summary: 'Dominant language for AI, ML, data, and automation.',
+        iconKey: 'python'
+      },
+      {
+        name: 'JavaScript / TypeScript',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+        summary: 'Core web stack language pair for modern front-end and back-end apps.',
+        iconKey: 'javascript-typescript'
+      },
+      {
+        name: 'Java',
+        url: 'https://www.oracle.com/java/',
+        summary: 'Strong enterprise and backend platform language.',
+        iconKey: 'java'
+      },
+      {
+        name: 'C#',
+        url: 'https://dotnet.microsoft.com/en-us/learn',
+        summary: 'Part of the .NET ecosystem for web, cloud, and app development.',
+        iconKey: 'csharp'
+      },
+      {
+        name: 'Rust',
+        url: 'https://www.rust-lang.org/',
+        summary: 'Safety-focused systems language with high performance.',
+        iconKey: 'rust'
+      },
+      {
+        name: 'Go (Golang)',
+        url: 'https://go.dev/',
+        summary: 'Cloud-native and service-oriented language with simple concurrency.',
+        iconKey: 'go'
+      },
+      {
+        name: 'C++',
+        url: 'https://isocpp.org/',
+        summary: 'Performance-critical language for systems and embedded work.',
+        iconKey: 'cplusplus'
+      }
+    ];
+
+    const IT_BADGE_FEATURED_ORDER = [
+      'stanford-ai-gc',
+      'mit-ml-ai-cert',
+      'gcp-ml-engineer',
+      'ml-specialization-andrew-ng',
+      'azure-ai-engineer',
+      'aws-ml-specialty',
+      'databricks-genai-assoc',
+      'arduino-certification',
+      'raspberry-pi-specialization'
+    ];
+
+    const ICON_STYLE = {
+      stanford: { label: 'SU', bg: '#8c1515', fg: '#ffffff' },
+      mit: { label: 'MIT', bg: '#a31f34', fg: '#ffffff' },
+      'google-cloud': { label: 'GCP', bg: '#1a73e8', fg: '#ffffff' },
+      coursera: { label: 'C', bg: '#0056d2', fg: '#ffffff' },
+      microsoft: { label: 'MS', bg: '#0067b8', fg: '#ffffff' },
+      ibm: { label: 'IBM', bg: '#0f62fe', fg: '#ffffff' },
+      aws: { label: 'AWS', bg: '#ff9900', fg: '#111111' },
+      deeplearningai: { label: 'DLAI', bg: '#1d2437', fg: '#ffffff' },
+      databricks: { label: 'DB', bg: '#ff3621', fg: '#ffffff' },
+      nvidia: { label: 'NV', bg: '#76b900', fg: '#0a0a0a' },
+      arduino: { label: 'A', bg: '#00878f', fg: '#ffffff' },
+      'raspberry-pi': { label: 'RP', bg: '#bc1142', fg: '#ffffff' },
+      python: { label: 'PY', bg: '#306998', fg: '#ffd343' },
+      'javascript-typescript': { label: 'JS/TS', bg: '#1f2937', fg: '#facc15' },
+      java: { label: 'J', bg: '#007396', fg: '#ffffff' },
+      csharp: { label: 'C#', bg: '#68217a', fg: '#ffffff' },
+      rust: { label: 'RS', bg: '#111111', fg: '#f8f3ea' },
+      go: { label: 'GO', bg: '#00add8', fg: '#05232b' },
+      cplusplus: { label: 'C++', bg: '#00599c', fg: '#ffffff' },
+      default: { label: 'IT', bg: '#6b7280', fg: '#ffffff' }
+    };
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function iconSvg(iconKey, title) {
+      const icon = ICON_STYLE[iconKey] || ICON_STYLE.default;
+      const safeTitle = escapeHtml(title);
+      const safeLabel = escapeHtml(icon.label);
+
+      return `<svg width="34" height="34" viewBox="0 0 34 34" role="img" aria-label="${safeTitle}" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="33" height="33" rx="9" fill="${icon.bg}" />
+        <text x="17" y="20" text-anchor="middle" fill="${icon.fg}" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.02em;">${safeLabel}</text>
+      </svg>`;
+    }
+
+    function statusClass(status) {
+      if (status.toLowerCase() === 'undertaking') return 'status-undertaking';
+      if (status.toLowerCase() === 'skill') return 'status-skill';
+      return '';
+    }
+
+    function renderSocialLinks() {
+      const container = document.getElementById('social-links');
+      container.innerHTML = SOCIAL_LINKS.map((item) => {
+        const attrs = item.enabled
+          ? `href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"`
+          : `href="#" aria-disabled="true" data-disabled="true"`;
+
+        const suffix = item.enabled ? '' : ' <span aria-hidden="true">(coming soon)</span>';
+
+        return `<a class="pill" ${attrs}>${escapeHtml(item.label)}${suffix}</a>`;
+      }).join('');
+
+      container.querySelectorAll('[data-disabled="true"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+        });
+      });
+    }
+
+    function renderProjects() {
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = PROJECTS.map((project) => {
+        return `<a class="project-card" href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer">
+          <h3>${escapeHtml(project.name)}</h3>
+          <p>${escapeHtml(project.summary)}</p>
+          <span class="project-link">Open project</span>
+        </a>`;
+      }).join('');
+    }
+
+    function renderCredentialBadgeCard(item) {
+      return `<a class="badge-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+        <div class="badge-top">
+          <span class="badge-icon">${iconSvg(item.iconKey, item.title)}</span>
+          <span class="status-chip ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
+        </div>
+        <h3 class="badge-title">${escapeHtml(item.title)}</h3>
+        <p class="badge-summary">${escapeHtml(item.summary)}</p>
+      </a>`;
+    }
+
+    function renderLanguageBadgeCard(item) {
+      return `<a class="language-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+        <div class="language-top">
+          <span class="badge-icon">${iconSvg(item.iconKey, item.name)}</span>
+          <span class="status-chip status-skill">Skill</span>
+        </div>
+        <h3 class="language-title">${escapeHtml(item.name)}</h3>
+        <p class="language-summary">${escapeHtml(item.summary)}</p>
+      </a>`;
+    }
+
+    function renderWheel(trackId, cardsHtml, duration) {
+      const track = document.getElementById(trackId);
+      track.style.setProperty('--duration', duration);
+      track.innerHTML = `<div class="wheel-group">${cardsHtml}</div><div class="wheel-group" aria-hidden="true">${cardsHtml}</div>`;
+    }
+
+    function renderFeaturedCredentialsWheel() {
+      const credentialMap = new Map(IT_CREDENTIALS.map((item) => [item.id, item]));
+      const featured = IT_BADGE_FEATURED_ORDER
+        .map((id) => credentialMap.get(id))
+        .filter(Boolean);
+
+      const cardsHtml = featured.map(renderCredentialBadgeCard).join('');
+      renderWheel('it-wheel-track', cardsHtml, '46s');
+    }
+
+    function renderLanguagesWheel() {
+      const cardsHtml = LANGUAGE_BADGES.map(renderLanguageBadgeCard).join('');
+      renderWheel('language-wheel-track', cardsHtml, '33s');
+    }
+
+    function renderCredentialCatalog() {
+      const categoryOrder = [
+        'AI / ML Degrees and Certifications',
+        'Arduino and Raspberry Pi'
+      ];
+
+      const catalog = document.getElementById('credential-catalog');
+      const grouped = new Map();
+
+      IT_CREDENTIALS.forEach((item) => {
+        const bucket = grouped.get(item.category) || [];
+        bucket.push(item);
+        grouped.set(item.category, bucket);
+      });
+
+      const groupsHtml = categoryOrder
+        .filter((category) => grouped.has(category))
+        .map((category) => {
+          const cards = grouped.get(category).map((item) => {
+            return `<article class="catalog-item">
+              <div class="catalog-item-header">
+                <div class="catalog-item-title">
+                  <span class="badge-icon">${iconSvg(item.iconKey, item.title)}</span>
+                  <h4>${escapeHtml(item.title)}</h4>
+                </div>
+                <span class="status-chip ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
+              </div>
+              <p class="issuer">${escapeHtml(item.issuer)}</p>
+              <p>${escapeHtml(item.summary)}</p>
+              <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">Open credential</a>
+            </article>`;
+          }).join('');
+
+          return `<section class="catalog-group">
+            <h3>${escapeHtml(category)}</h3>
+            <div class="catalog-grid">${cards}</div>
+          </section>`;
+        }).join('');
+
+      catalog.innerHTML = groupsHtml;
+    }
+
+    function bindCredentialToggle() {
+      const button = document.getElementById('catalog-toggle');
+      const catalog = document.getElementById('credential-catalog');
+
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        const next = !expanded;
+        button.setAttribute('aria-expanded', String(next));
+        button.textContent = next ? 'Hide full credential list' : 'View all IT credentials';
+        catalog.hidden = !next;
+      });
+    }
+
+    function initFooterYear() {
+      document.getElementById('footer-year').textContent = `(c) ${new Date().getFullYear()}`;
+    }
+
+    renderSocialLinks();
+    renderProjects();
+    renderFeaturedCredentialsWheel();
+    renderLanguagesWheel();
+    renderCredentialCatalog();
+    bindCredentialToggle();
+    initFooterYear();
   </script>
 </body>
 </html>
