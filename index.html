@@ -290,6 +290,10 @@
 
     .badge-card {
       width: 232px;
+      padding: 0;
+      gap: 0;
+      overflow: hidden;
+      position: relative;
     }
 
     .language-card {
@@ -329,10 +333,16 @@
       white-space: nowrap;
     }
 
-    .status-chip.status-undertaking {
-      background: rgba(255, 237, 193, 0.68);
-      border-color: rgba(205, 137, 28, 0.38);
+    .status-chip.status-in-progress {
+      background: rgba(255, 237, 193, 0.78);
+      border-color: rgba(205, 137, 28, 0.42);
       color: #8d5a12;
+    }
+
+    .status-chip.status-planned {
+      background: rgba(236, 232, 255, 0.8);
+      border-color: rgba(129, 110, 223, 0.35);
+      color: #5b4aa5;
     }
 
     .status-chip.status-skill {
@@ -390,6 +400,56 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    .badge-ribbon {
+      height: 8px;
+      background: linear-gradient(90deg, #f3bfdc 0%, #e0218a 100%);
+    }
+
+    .badge-ribbon.status-in-progress {
+      background: linear-gradient(90deg, #f7d17b 0%, #d99617 100%);
+    }
+
+    .badge-ribbon.status-planned {
+      background: linear-gradient(90deg, #8db2ff 0%, #5b6fe8 100%);
+    }
+
+    .badge-content {
+      display: grid;
+      gap: 0.68rem;
+      padding: 0.9rem;
+    }
+
+    .badge-meta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .badge-type {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    .badge-card .badge-media {
+      width: 100%;
+      height: 74px;
+      padding: 0.55rem 0.8rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(251, 243, 248, 0.92));
+      border-color: rgba(156, 77, 124, 0.16);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    }
+
+    .badge-issuer-label {
+      margin: 0;
+      font-size: 0.76rem;
+      color: var(--ink-faint);
+      line-height: 1.35;
     }
 
     .badge-fallback {
@@ -618,14 +678,14 @@
     <section class="panel" aria-labelledby="it-credentials-title">
       <div class="section-head">
         <h2 id="it-credentials-title">IT Degrees and Certifications</h2>
-        <p class="section-kicker">Featured credentials</p>
+        <p class="section-kicker">Badge gallery</p>
       </div>
       <div class="wheel-wrap" aria-label="Featured IT credentials" id="it-wheel-wrap">
         <div class="wheel-track" id="it-wheel-track"></div>
       </div>
 
       <button type="button" class="toggle-btn" id="catalog-toggle" aria-expanded="false" aria-controls="credential-catalog">
-        View all IT credentials
+        View full credential list
       </button>
       <div id="credential-catalog" class="catalog" hidden></div>
     </section>
@@ -633,7 +693,7 @@
     <section class="panel" aria-labelledby="languages-title">
       <div class="section-head">
         <h2 id="languages-title">Coding Languages I Know</h2>
-        <p class="section-kicker">Skills wheel</p>
+        <p class="section-kicker">Language badges</p>
       </div>
       <div class="wheel-wrap" aria-label="Coding language badges" id="language-wheel-wrap">
         <div class="wheel-track" id="language-wheel-track"></div>
@@ -645,7 +705,7 @@
         <h2 id="non-it-title">Non-IT Qualifications</h2>
       </div>
       <ul class="simple-list">
-        <li>Juris Doctor (undertaking), Flinders University</li>
+        <li>Juris Doctor (in progress), Flinders University</li>
         <li>Master of Business Administration, University of Adelaide</li>
         <li>Master of Nursing (Gerontology), University of Tasmania</li>
         <li>Graduate Diploma in Nursing (Gerontology)</li>
@@ -681,7 +741,7 @@
       { label: 'GitHub', url: 'https://github.com/ashleydenham', enabled: true },
       { label: 'X', url: 'https://x.com/AshleyDenham', enabled: true },
       { label: 'Twitter', url: 'https://twitter.com/AshleyDenham', enabled: true },
-      { label: 'LinkedIn', url: '#', enabled: false }
+      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ashley-denham-35a3662b/', enabled: true }
     ];
 
     const PROJECTS = [
@@ -703,7 +763,7 @@
         title: 'Stanford Artificial Intelligence Graduate Certificate',
         issuer: 'Stanford Online',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Undertaking',
+        status: 'in-progress',
         url: 'https://online.stanford.edu/programs/artificial-intelligence-graduate-certificate',
         summary: 'Graduate-level AI certificate covering ML, NLP, robotics, and ethics.',
         imageSrc: 'assets/badges/stanford.png',
@@ -714,7 +774,7 @@
         title: 'MIT Professional Certificate Program in Machine Learning and Artificial Intelligence',
         issuer: 'MIT Professional Education',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Undertaking',
+        status: 'in-progress',
         url: 'https://professional.mit.edu/course-catalog/professional-certificate-program-machine-learning-artificial-intelligence',
         summary: 'Rigorous professional program in ML algorithms, deep learning, and AI applications.',
         imageSrc: 'assets/badges/mit.svg',
@@ -725,7 +785,7 @@
         title: 'Google Cloud Professional Machine Learning Engineer',
         issuer: 'Google Cloud',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://cloud.google.com/learn/certification/machine-learning-engineer',
         summary: 'Production ML design, deployment, and scaling on GCP and Vertex AI.',
         imageSrc: 'assets/badges/google-cloud.svg',
@@ -736,7 +796,7 @@
         title: 'Machine Learning Specialization (Andrew Ng, Stanford + DeepLearning.AI)',
         issuer: 'Coursera',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.coursera.org/specializations/machine-learning-introduction',
         summary: 'Foundational and advanced ML specialization with a strong industry profile.',
         imageSrc: 'assets/badges/coursera.svg',
@@ -747,7 +807,7 @@
         title: 'Microsoft Certified: Azure AI Engineer Associate (AI-102)',
         issuer: 'Microsoft',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer',
         summary: 'Builds and deploys AI solutions across Azure Cognitive and generative services.',
         imageSrc: 'assets/badges/azure.svg',
@@ -758,7 +818,7 @@
         title: 'IBM AI Engineering Professional Certificate',
         issuer: 'Coursera',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.coursera.org/professional-certificates/ibm-ai-engineering',
         summary: 'Hands-on deep learning and scalable ML engineering with PyTorch workflows.',
         imageSrc: 'assets/badges/ibm.svg',
@@ -769,7 +829,7 @@
         title: 'Google Cloud Professional Data Engineer',
         issuer: 'Google Cloud',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://cloud.google.com/learn/certification/data-engineer',
         summary: 'Data pipelines and infrastructure skills often paired with ML engineering.',
         imageSrc: 'assets/badges/google-cloud.svg',
@@ -780,7 +840,7 @@
         title: 'AWS Certified Machine Learning - Specialty',
         issuer: 'AWS',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://aws.amazon.com/certification/certified-machine-learning-specialty/',
         summary: 'Enterprise-level AWS ML capability with SageMaker and deployment focus.',
         imageSrc: 'assets/badges/aws.svg',
@@ -791,7 +851,7 @@
         title: 'DeepLearning.AI Short Courses and Specializations',
         issuer: 'DeepLearning.AI',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.deeplearning.ai/courses/',
         summary: 'Applied short courses in generative AI, LLM tooling, and modern workflows.',
         imageSrc: 'assets/badges/deeplearning-ai.png',
@@ -802,7 +862,7 @@
         title: 'Databricks Certified Generative AI Engineer Associate',
         issuer: 'Databricks',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.databricks.com/learn/certification/genai-engineer-associate',
         summary: 'GenAI engineering focused on scalable LLM workloads in Databricks.',
         imageSrc: 'assets/badges/databricks.svg',
@@ -813,7 +873,7 @@
         title: 'NVIDIA Deep Learning Institute Certifications',
         issuer: 'NVIDIA',
         category: 'AI / ML Degrees and Certifications',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.nvidia.com/en-us/training/',
         summary: 'GPU-accelerated AI and deep learning training for high-performance computing.',
         imageSrc: 'assets/badges/nvidia.svg',
@@ -824,7 +884,7 @@
         title: 'Arduino Certification',
         issuer: 'Arduino',
         category: 'Arduino and Raspberry Pi',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.arduino.cc/education/certification',
         summary: 'Official certification for Arduino electronics and physical computing skills.',
         imageSrc: 'assets/badges/arduino.svg',
@@ -835,7 +895,7 @@
         title: 'Arduino Junior Certification',
         issuer: 'Arduino',
         category: 'Arduino and Raspberry Pi',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.arduino.cc/education/certifications',
         summary: 'Entry-level Arduino credential for core electronics and programming concepts.',
         imageSrc: 'assets/badges/arduino.svg',
@@ -846,7 +906,7 @@
         title: 'Raspberry Pi Projects Specialization (Johns Hopkins, Coursera)',
         issuer: 'Coursera',
         category: 'Arduino and Raspberry Pi',
-        status: 'Listed',
+        status: 'planned',
         url: 'https://www.coursera.org/specializations/raspberry-pi',
         summary: 'University-backed Raspberry Pi projects with hardware interfacing and Python.',
         imageSrc: 'assets/badges/raspberry-pi.svg',
@@ -954,10 +1014,40 @@
       </span>`;
     }
 
-    function statusClass(status) {
-      if (status.toLowerCase() === 'undertaking') return 'status-undertaking';
-      if (status.toLowerCase() === 'skill') return 'status-skill';
-      return '';
+    function statusMeta(status) {
+      const normalized = String(status || '').trim().toLowerCase();
+
+      if (normalized === 'undertaking' || normalized === 'in-progress') {
+        return { label: 'In progress', className: 'status-in-progress' };
+      }
+
+      if (normalized === 'listed' || normalized === 'planned') {
+        return { label: 'Planned', className: 'status-planned' };
+      }
+
+      if (normalized === 'skill' || normalized === 'language') {
+        return { label: 'Language', className: 'status-skill' };
+      }
+
+      if (normalized === 'completed' || normalized === 'earned') {
+        return { label: 'Completed', className: '' };
+      }
+
+      return { label: 'Credential', className: '' };
+    }
+
+    function credentialTypeLabel(item) {
+      const title = String(item.title || '').toLowerCase();
+
+      if (title.includes('graduate certificate')) return 'Graduate certificate';
+      if (title.includes('professional certificate')) return 'Professional certificate';
+      if (title.includes('short courses')) return 'Course collection';
+      if (title.includes('specialization')) return 'Specialization';
+      if (title.includes('associate')) return 'Associate certification';
+      if (title.includes('specialty')) return 'Specialty certification';
+      if (title.includes('professional')) return 'Professional certification';
+      if (title.includes('certification') || title.includes('certified')) return 'Certification';
+      return 'Credential';
     }
 
     function renderSocialLinks() {
@@ -991,12 +1081,19 @@
     }
 
     function renderCredentialBadgeCard(item) {
+      const status = statusMeta(item.status);
+
       return `<a class="badge-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
-        <div class="badge-top">
+        <div class="badge-ribbon ${status.className}"></div>
+        <div class="badge-content">
+          <div class="badge-meta">
+            <span class="badge-type">${escapeHtml(credentialTypeLabel(item))}</span>
+            <span class="status-chip ${status.className}">${escapeHtml(status.label)}</span>
+          </div>
           ${badgeMediaHtml(item)}
-          <span class="status-chip ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
+          <h3 class="badge-title">${escapeHtml(item.title)}</h3>
+          <p class="badge-issuer-label">${escapeHtml(item.issuer)}</p>
         </div>
-        <h3 class="badge-title">${escapeHtml(item.title)}</h3>
       </a>`;
     }
 
@@ -1004,7 +1101,7 @@
       return `<a class="language-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
         <div class="language-top">
           ${badgeMediaHtml(item, 'badge-media--language')}
-          <span class="status-chip status-skill">Skill</span>
+          <span class="status-chip status-skill">Language</span>
         </div>
         <h3 class="language-title">${escapeHtml(item.name)}</h3>
       </a>`;
@@ -1050,13 +1147,15 @@
         .filter((category) => grouped.has(category))
         .map((category) => {
           const cards = grouped.get(category).map((item) => {
+            const status = statusMeta(item.status);
+
             return `<article class="catalog-item">
               <div class="catalog-item-header">
                 <div class="catalog-item-title">
                   ${badgeMediaHtml(item, 'badge-media--catalog')}
                   <h4>${escapeHtml(item.title)}</h4>
                 </div>
-                <span class="status-chip ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
+                <span class="status-chip ${status.className}">${escapeHtml(status.label)}</span>
               </div>
               <p class="issuer">${escapeHtml(item.issuer)}</p>
               <p>${escapeHtml(item.summary)}</p>
@@ -1081,7 +1180,7 @@
         const expanded = button.getAttribute('aria-expanded') === 'true';
         const next = !expanded;
         button.setAttribute('aria-expanded', String(next));
-        button.textContent = next ? 'Hide full credential list' : 'View all IT credentials';
+        button.textContent = next ? 'Hide full credential list' : 'View full credential list';
         catalog.hidden = !next;
       });
     }

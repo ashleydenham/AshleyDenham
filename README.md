@@ -49,6 +49,7 @@ At the top of the `<script>` block in `index.html`:
   - fields: `name`, `url`, `summary`
 - `IT_CREDENTIALS`
   - fields: `id`, `title`, `issuer`, `category`, `status`, `url`, `summary`, `imageSrc`, `imageAlt`
+  - `status` values in use: `in-progress`, `planned`
 - `LANGUAGE_BADGES`
   - fields: `name`, `url`, `summary`, `imageSrc`, `imageAlt`
 - `IT_BADGE_FEATURED_ORDER`
@@ -58,8 +59,8 @@ At the top of the `<script>` block in `index.html`:
 
 - Badge wheels auto-scroll horizontally and pause on hover/focus.
 - Badge logos are served from local files in `assets/badges/` to avoid external image failures.
-- "View all IT credentials" expands/collapses the full categorized catalog.
-- LinkedIn button is intentionally set as a placeholder (`enabled: false`) until the final profile URL is added.
+- Featured credentials render as compact certificate-style badge cards.
+- "View full credential list" expands/collapses the full categorized catalog.
 
 ## Deployment
 
