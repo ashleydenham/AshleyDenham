@@ -29,15 +29,14 @@ Personal homepage for **Ashley Denham**.
 
 ## Homepage Sections (top to bottom)
 
-1. Hero (photo + name)
-2. Social buttons
-3. Projects
-4. IT credentials featured wheel
-5. Coding languages wheel
-6. Expandable full IT credential catalog
-7. Non-IT qualifications
-8. Previous careers
-9. Footer
+1. Sticky section navigation
+2. Hero (name, positioning statement, social links, profile snapshot)
+3. Current focus
+4. Selected work
+5. Study and development
+6. Background
+7. IT credential roadmap
+8. Footer
 
 ## Editable Content Blocks
 
@@ -45,22 +44,30 @@ At the top of the `<script>` block in `index.html`:
 
 - `SOCIAL_LINKS`
   - fields: `label`, `url`, `enabled`
+- `FOCUS_PILLARS`
+  - fields: `title`, `summary`
 - `PROJECTS`
-  - fields: `name`, `url`, `summary`
+  - fields: `name`, `url`, `summary`, `label`
+- `CURRENT_STUDY`
+  - fields: `title`, `issuer`, `status`, `summary`, `url`, `imageSrc`, `imageAlt`
 - `IT_CREDENTIALS`
   - fields: `id`, `title`, `issuer`, `category`, `status`, `url`, `summary`, `imageSrc`, `imageAlt`
   - `status` values in use: `in-progress`, `planned`
 - `LANGUAGE_BADGES`
-  - fields: `name`, `url`, `summary`, `imageSrc`, `imageAlt`
-- `IT_BADGE_FEATURED_ORDER`
-  - array of credential `id` values used in the featured auto-scroll wheel
+  - fields: `name`, `url`, `imageSrc`, `imageAlt`
+- `NON_IT_QUALIFICATIONS`
+  - array of qualification strings rendered in the Background section
+- `CAREER_HIGHLIGHTS`
+  - array of career highlight strings rendered in the Background section
+- `ROADMAP_ORDER`
+  - array of credential `id` values used in the IT roadmap marquee
 
 ## Interaction Notes
 
-- Badge wheels auto-scroll horizontally and pause on hover/focus.
+- The roadmap marquee auto-scrolls horizontally and pauses on hover/focus.
 - Badge logos are served from local files in `assets/badges/` to avoid external image failures.
-- Featured credentials render as compact certificate-style badge cards.
-- "View full credential list" expands/collapses the full categorized catalog.
+- The full IT credential library is available inside a `details` panel so the homepage stays lighter.
+- Coding languages now render as a compact tools strip rather than a separate scrolling section.
 
 ## Deployment
 

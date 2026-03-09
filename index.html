@@ -1,65 +1,82 @@
-<!DOCTYPE html>
-<html lang="en-AU">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ashley Denham - Adelaide, Australia</title>
-  <meta name="description" content="Ashley Denham - AI and technology learning, projects, qualifications, and professional background.">
-  <meta name="theme-color" content="#f8f2f7">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f7a8d2'/%3E%3Cstop offset='1' stop-color='%23e0218a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='3' y='3' width='58' height='58' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+  <title>Ashley Denham | AI, Healthcare, and Leadership</title>
+  <meta name="description" content="Ashley Denham's personal profile covering AI and machine learning study, healthcare leadership, projects, and professional background.">
+  <meta name="theme-color" content="#f1dde5">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f1bfd7'/%3E%3Cstop offset='1' stop-color='%23c74f87'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='4' y='4' width='56' height='56' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Georgia,serif' font-size='27' font-weight='700' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-1: #f8f2f7;
-      --bg-2: #fff8fc;
-      --bg-3: #f9eef6;
-      --card: rgba(255, 255, 255, 0.76);
-      --card-border: rgba(224, 33, 138, 0.12);
-      --ink: #17161b;
-      --ink-soft: #4f4550;
-      --ink-faint: #7a6e7a;
-      --accent: #e0218a;
-      --accent-soft: #f6b6da;
-      --focus: #b6006a;
-      --shadow-soft: 0 22px 60px rgba(70, 34, 67, 0.14);
-      --shadow-card: 0 16px 40px rgba(84, 40, 80, 0.13);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --space-1: 0.5rem;
-      --space-2: 0.75rem;
-      --space-3: 1rem;
-      --space-4: 1.5rem;
-      --space-5: 2rem;
-      --space-6: 2.5rem;
-      --space-7: 3.5rem;
-      --max-width: 980px;
-      --font-sans: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --bg: #f7ebf0;
+      --bg-strong: #efd5df;
+      --panel: rgba(255, 251, 253, 0.82);
+      --panel-strong: rgba(255, 250, 252, 0.92);
+      --panel-edge: rgba(137, 68, 103, 0.15);
+      --ink: #22161f;
+      --ink-soft: #5d4454;
+      --ink-faint: #876879;
+      --accent: #c74f87;
+      --accent-deep: #91285d;
+      --accent-warm: #d29c2d;
+      --accent-cool: #6173da;
+      --focus: #d13081;
+      --shadow: 0 24px 60px rgba(126, 51, 91, 0.12);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --max-width: 1120px;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html,
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      color: var(--ink);
-      line-height: 1.6;
-      background:
-        radial-gradient(circle at 12% 8%, rgba(240, 119, 189, 0.16), transparent 44%),
-        radial-gradient(circle at 86% 0%, rgba(224, 33, 138, 0.08), transparent 40%),
-        linear-gradient(160deg, var(--bg-1), var(--bg-2) 50%, var(--bg-3));
       min-height: 100vh;
-      overflow-x: hidden;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 34%),
+        radial-gradient(circle at 90% 18%, rgba(239, 194, 214, 0.9), transparent 28%),
+        linear-gradient(180deg, #f1dde5 0%, #f7ebf0 38%, #fbf5f8 100%);
     }
 
-    a {
-      color: inherit;
+    body::before,
+    body::after {
+      content: '';
+      position: fixed;
+      inset: auto;
+      z-index: -1;
+      border-radius: 999px;
+      filter: blur(32px);
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    body::before {
+      width: 260px;
+      height: 260px;
+      top: 88px;
+      right: 6vw;
+      background: rgba(243, 177, 207, 0.6);
+    }
+
+    body::after {
+      width: 220px;
+      height: 220px;
+      bottom: 80px;
+      left: 4vw;
+      background: rgba(232, 205, 161, 0.38);
     }
 
     img {
@@ -67,389 +84,631 @@
       display: block;
     }
 
-    .container {
-      width: min(var(--max-width), 92vw);
-      margin: 0 auto;
-      padding: var(--space-6) 0 var(--space-7);
-      display: grid;
-      gap: var(--space-5);
+    a {
+      color: inherit;
     }
 
-    .panel {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-card);
-      backdrop-filter: blur(16px) saturate(1.2);
-      -webkit-backdrop-filter: blur(16px) saturate(1.2);
-      padding: clamp(1.2rem, 2.6vw, 2rem);
-      overflow: hidden;
+    main {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 56px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .topbar,
+    .section,
+    .hero {
+      border: 1px solid var(--panel-edge);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+    }
+
+    .wordmark {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(142, 78, 112, 0.12);
+      border-radius: 999px;
+      padding: 0.48rem 0.82rem;
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background 160ms ease, transform 160ms ease, border-color 160ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: rgba(255, 241, 247, 1);
+      border-color: rgba(199, 79, 135, 0.28);
+      transform: translateY(-1px);
     }
 
     .hero {
+      border-radius: var(--radius-xl);
+      padding: 30px;
       display: grid;
-      gap: var(--space-4);
-      justify-items: center;
-      text-align: center;
-      animation: rise-in 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-      box-shadow: var(--shadow-soft);
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 340px);
+      gap: 24px;
+      align-items: stretch;
+      overflow: hidden;
+      position: relative;
     }
 
-    .avatar-wrap {
-      width: clamp(116px, 18vw, 152px);
-      aspect-ratio: 1 / 1;
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 18px 18px auto auto;
+      width: 180px;
+      height: 180px;
       border-radius: 999px;
-      padding: 4px;
-      background: linear-gradient(145deg, rgba(224, 33, 138, 0.22), rgba(255, 255, 255, 0.95));
-      box-shadow: 0 10px 35px rgba(176, 20, 112, 0.24);
+      background: radial-gradient(circle at center, rgba(244, 189, 216, 0.42), transparent 72%);
+      pointer-events: none;
     }
 
-    .avatar {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: inherit;
-      border: 2px solid rgba(255, 255, 255, 0.9);
+    .eyebrow,
+    .section-kicker,
+    .snapshot-kicker,
+    .mini-kicker,
+    .tools-label {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.73rem;
+      font-weight: 800;
+      color: var(--ink-faint);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      align-content: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    summary {
+      margin: 0;
+      letter-spacing: -0.04em;
+    }
+
+    h1,
+    .section-title,
+    .snapshot-title {
+      font-family: 'Fraunces', serif;
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      letter-spacing: -0.03em;
-      line-height: 1.06;
+      font-size: clamp(3rem, 8vw, 5.35rem);
+      line-height: 0.94;
+      max-width: 10ch;
     }
 
-    .subtle {
+    .lede {
       margin: 0;
-      max-width: 58ch;
+      max-width: 26ch;
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      line-height: 1.36;
+      font-weight: 700;
+      color: #352330;
+    }
+
+    .support {
+      margin: 0;
+      max-width: 62ch;
       color: var(--ink-soft);
-      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .hero-notes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-notes span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(145, 40, 93, 0.12);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink-soft);
+      font-size: 0.84rem;
+      font-weight: 700;
     }
 
     .social-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      margin-top: 0.25rem;
+      gap: 10px;
+      margin-top: 6px;
     }
 
-    .pill {
-      border: 1px solid rgba(176, 38, 117, 0.2);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.85);
-      color: #2c2430;
-      padding: 0.56rem 1rem;
-      font-weight: 600;
+    .social-pill {
       text-decoration: none;
-      font-size: 0.93rem;
-      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
-      box-shadow: 0 6px 18px rgba(149, 57, 116, 0.08);
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
-      cursor: pointer;
+      justify-content: center;
+      min-width: 108px;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(150, 73, 116, 0.16);
+      background: rgba(255, 255, 255, 0.92);
+      color: #301d28;
+      font-size: 0.9rem;
+      font-weight: 800;
+      transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
     }
 
-    .pill:hover,
-    .pill:focus-visible {
-      transform: translateY(-1px);
-      border-color: rgba(224, 33, 138, 0.45);
-      box-shadow: 0 10px 24px rgba(164, 36, 114, 0.16);
-      background: #ffffff;
+    .social-pill:hover,
+    .social-pill:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(199, 79, 135, 0.28);
+      box-shadow: 0 16px 30px rgba(145, 40, 93, 0.14);
     }
 
-    .pill[aria-disabled="true"] {
-      color: var(--ink-faint);
-      border-style: dashed;
-      cursor: not-allowed;
-      opacity: 0.85;
+    .snapshot-card {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 14px;
+      padding: 18px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 247, 251, 0.92));
+      border: 1px solid rgba(145, 40, 93, 0.12);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      min-width: 0;
     }
 
-    .pill[aria-disabled="true"]:hover,
-    .pill[aria-disabled="true"]:focus-visible {
-      transform: none;
-      border-color: rgba(176, 38, 117, 0.2);
-      box-shadow: 0 6px 18px rgba(149, 57, 116, 0.08);
+    .avatar-frame {
+      width: min(190px, 55vw);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, rgba(246, 228, 236, 0.95), rgba(255, 255, 255, 0.96));
+      border: 1px solid rgba(150, 73, 116, 0.16);
+      box-shadow: 0 22px 36px rgba(137, 68, 103, 0.12);
+    }
+
+    .avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .snapshot-title {
+      font-size: 1.7rem;
+      line-height: 1.05;
+    }
+
+    .fact-list {
+      margin: 0;
+      padding-left: 1rem;
+      display: grid;
+      gap: 0.72rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      font-size: 0.95rem;
+    }
+
+    .fact-list strong {
+      color: var(--ink);
+    }
+
+    .section {
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      display: grid;
+      gap: 18px;
     }
 
     .section-head {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      align-items: baseline;
-      gap: 0.75rem;
-      margin-bottom: var(--space-3);
+      align-items: end;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    h2 {
-      margin: 0;
-      font-size: clamp(1.35rem, 3vw, 1.9rem);
-      letter-spacing: -0.02em;
-      line-height: 1.16;
-    }
-
-    .section-kicker {
-      margin: 0;
-      color: var(--ink-faint);
-      font-size: 0.92rem;
-    }
-
-    .projects-grid {
+    .section-head > div {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: var(--space-3);
+      gap: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 0.98;
+    }
+
+    .section-note {
+      margin: 0;
+      max-width: 34ch;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      font-size: 0.96rem;
+    }
+
+    .focus-grid,
+    .project-grid,
+    .study-grid,
+    .background-grid,
+    .catalog-groups {
+      display: grid;
+      gap: 16px;
+    }
+
+    .focus-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project-grid,
+    .background-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .study-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .focus-card,
+    .project-card,
+    .study-card,
+    .story-card,
+    .catalog-card,
+    .roadmap-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(145, 40, 93, 0.12);
+      background: var(--panel-strong);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.84);
+    }
+
+    .focus-card,
+    .story-card,
+    .catalog-card {
+      padding: 18px;
+    }
+
+    .focus-card {
+      display: grid;
+      gap: 10px;
+      min-height: 210px;
+    }
+
+    .focus-card p,
+    .project-card p,
+    .study-card p,
+    .story-card p,
+    .catalog-card p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.62;
+    }
+
+    .focus-card h3,
+    .project-card h3,
+    .study-card h3,
+    .story-card h3,
+    .catalog-card h4,
+    .roadmap-card h3 {
+      font-size: 1.1rem;
+      line-height: 1.18;
+    }
+
+    .focus-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: rgba(199, 79, 135, 0.12);
+      color: var(--accent-deep);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .tools-band {
+      display: grid;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .tools-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tool-chip {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.68rem 0.84rem;
+      border-radius: 999px;
+      border: 1px solid rgba(145, 40, 93, 0.12);
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+
+    .tool-chip:hover,
+    .tool-chip:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(199, 79, 135, 0.28);
+    }
+
+    .tool-chip img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .tool-chip .badge-media {
+      width: 32px;
+      height: 32px;
+      padding: 0.18rem;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    .tool-chip .badge-fallback {
+      border-radius: 10px;
+      font-size: 0.62rem;
     }
 
     .project-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(151, 66, 116, 0.15);
-      padding: var(--space-4);
       text-decoration: none;
-      color: inherit;
-      transition: transform 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
-      min-height: 156px;
+      padding: 20px;
       display: grid;
-      align-content: start;
-      gap: 0.55rem;
+      gap: 12px;
+      min-height: 212px;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
     }
 
     .project-card:hover,
     .project-card:focus-visible {
-      transform: translateY(-2px);
-      border-color: rgba(224, 33, 138, 0.34);
-      box-shadow: 0 14px 32px rgba(151, 50, 112, 0.16);
+      transform: translateY(-3px);
+      border-color: rgba(199, 79, 135, 0.24);
+      box-shadow: 0 18px 32px rgba(145, 40, 93, 0.12);
     }
 
-    .project-card h3 {
-      margin: 0;
-      font-size: 1.05rem;
-      line-height: 1.25;
-    }
-
-    .project-card p {
-      margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.95rem;
-    }
-
-    .project-card .project-link {
-      margin-top: 0.2rem;
-      color: #903068;
-      font-weight: 600;
-      font-size: 0.89rem;
-    }
-
-    .wheel-wrap {
-      position: relative;
-      overflow: hidden;
-      mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(158, 72, 126, 0.18);
-      background: rgba(255, 255, 255, 0.66);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
-    }
-
-    .wheel-track {
+    .project-meta {
       display: flex;
-      width: max-content;
-      animation: wheel var(--duration, 40s) linear infinite;
-      padding: 0.9rem;
-      gap: 0;
-      will-change: transform;
-    }
-
-    .wheel-group {
-      display: flex;
-      gap: 0.8rem;
-      padding-right: 0.8rem;
-      min-width: max-content;
-    }
-
-    .wheel-wrap:hover .wheel-track,
-    .wheel-wrap:focus-within .wheel-track {
-      animation-play-state: paused;
-    }
-
-    .badge-card,
-    .language-card {
-      display: grid;
-      align-content: start;
-      gap: 0.68rem;
-      min-height: 116px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(157, 79, 129, 0.2);
-      background: rgba(255, 255, 255, 0.94);
-      padding: 0.9rem;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
-    }
-
-    .badge-card {
-      width: 232px;
-      padding: 0;
-      gap: 0;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .language-card {
-      width: 184px;
-      min-height: 104px;
-      justify-content: start;
-    }
-
-    .badge-card:hover,
-    .badge-card:focus-visible,
-    .language-card:hover,
-    .language-card:focus-visible {
-      transform: translateY(-2px);
-      border-color: rgba(224, 33, 138, 0.35);
-      box-shadow: 0 10px 25px rgba(146, 47, 108, 0.19);
-    }
-
-    .badge-top,
-    .language-top {
-      display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 0.6rem;
-      min-height: 42px;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink-faint);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+      color: var(--accent-deep);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .study-card,
+    .roadmap-card {
+      overflow: hidden;
+    }
+
+    .study-card {
+      display: grid;
+      grid-template-rows: 6px auto;
+    }
+
+    .study-card-body {
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .accent-bar {
+      background: linear-gradient(90deg, #f0b8d4 0%, #c74f87 100%);
+    }
+
+    .accent-bar.status-in-progress {
+      background: linear-gradient(90deg, #edca77 0%, #ce9523 100%);
+    }
+
+    .accent-bar.status-planned {
+      background: linear-gradient(90deg, #9ab4ff 0%, #6173da 100%);
+    }
+
+    .study-meta,
+    .roadmap-meta,
+    .catalog-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .study-meta p,
+    .roadmap-meta p,
+    .catalog-meta p {
+      color: var(--ink-faint);
     }
 
     .status-chip {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.28rem 0.62rem;
       border-radius: 999px;
-      padding: 0.2rem 0.58rem;
-      border: 1px solid rgba(189, 91, 143, 0.3);
-      background: rgba(249, 230, 241, 0.82);
-      color: #883664;
+      border: 1px solid rgba(145, 40, 93, 0.16);
+      background: rgba(245, 228, 239, 0.88);
+      color: var(--accent-deep);
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       white-space: nowrap;
     }
 
     .status-chip.status-in-progress {
-      background: rgba(255, 237, 193, 0.78);
-      border-color: rgba(205, 137, 28, 0.42);
-      color: #8d5a12;
+      background: rgba(250, 236, 194, 0.92);
+      border-color: rgba(206, 149, 35, 0.28);
+      color: #8b5d0a;
     }
 
     .status-chip.status-planned {
-      background: rgba(236, 232, 255, 0.8);
-      border-color: rgba(129, 110, 223, 0.35);
-      color: #5b4aa5;
+      background: rgba(235, 238, 255, 0.94);
+      border-color: rgba(97, 115, 218, 0.24);
+      color: #4559c8;
     }
 
-    .status-chip.status-skill {
-      background: rgba(234, 238, 255, 0.8);
-      border-color: rgba(99, 118, 196, 0.31);
-      color: #324493;
+    .study-link,
+    .catalog-link {
+      color: var(--accent-deep);
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(145, 40, 93, 0.16);
+      width: fit-content;
+      padding-bottom: 1px;
     }
 
-    .badge-title,
-    .language-title {
+    .study-link:hover,
+    .study-link:focus-visible,
+    .catalog-link:hover,
+    .catalog-link:focus-visible {
+      border-bottom-color: currentColor;
+    }
+
+    .story-card {
+      display: grid;
+      gap: 12px;
+    }
+
+    .story-card ul {
       margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.28;
-      letter-spacing: -0.01em;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
+      padding-left: 1.15rem;
+      display: grid;
+      gap: 0.52rem;
+      color: var(--ink-soft);
+      line-height: 1.56;
+    }
+
+    .roadmap-wrap {
+      position: relative;
       overflow: hidden;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(145, 40, 93, 0.12);
+      background: rgba(255, 255, 255, 0.72);
+      mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
     }
 
-    .badge-title {
-      min-height: 3.6em;
-      -webkit-line-clamp: 3;
+    .roadmap-track {
+      display: flex;
+      width: max-content;
+      gap: 0;
+      padding: 0.9rem;
+      animation: marquee 38s linear infinite;
+      will-change: transform;
     }
 
-    .language-title {
-      -webkit-line-clamp: 2;
+    .roadmap-wrap:hover .roadmap-track,
+    .roadmap-wrap:focus-within .roadmap-track {
+      animation-play-state: paused;
+    }
+
+    .roadmap-group {
+      display: flex;
+      gap: 0.9rem;
+      padding-right: 0.9rem;
+      min-width: max-content;
+    }
+
+    .roadmap-card {
+      width: 230px;
+      text-decoration: none;
+      display: grid;
+      grid-template-rows: 6px auto;
+      color: inherit;
+      transition: transform 170ms ease, border-color 170ms ease;
+    }
+
+    .roadmap-card:hover,
+    .roadmap-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(199, 79, 135, 0.24);
+    }
+
+    .roadmap-body {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
     }
 
     .badge-media {
-      width: 104px;
-      height: 42px;
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 auto;
-      border: 1px solid rgba(121, 60, 106, 0.25);
+      width: 100%;
+      height: 70px;
+      border-radius: 16px;
+      border: 1px solid rgba(145, 40, 93, 0.12);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 244, 248, 0.95));
+      display: grid;
+      place-items: center;
+      padding: 0.7rem 0.9rem;
       overflow: hidden;
-      background: #fff;
-      padding: 0.4rem 0.55rem;
     }
 
-    .badge-media--language {
-      width: 82px;
-    }
-
-    .badge-media--catalog {
-      width: 74px;
-      height: 48px;
-      padding: 0.45rem 0.55rem;
+    .badge-media--small {
+      height: 54px;
+      padding: 0.55rem 0.72rem;
     }
 
     .badge-media img {
-      display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
-    }
-
-    .badge-ribbon {
-      height: 8px;
-      background: linear-gradient(90deg, #f3bfdc 0%, #e0218a 100%);
-    }
-
-    .badge-ribbon.status-in-progress {
-      background: linear-gradient(90deg, #f7d17b 0%, #d99617 100%);
-    }
-
-    .badge-ribbon.status-planned {
-      background: linear-gradient(90deg, #8db2ff 0%, #5b6fe8 100%);
-    }
-
-    .badge-content {
-      display: grid;
-      gap: 0.68rem;
-      padding: 0.9rem;
-    }
-
-    .badge-meta {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 0.5rem;
-    }
-
-    .badge-type {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-
-    .badge-card .badge-media {
-      width: 100%;
-      height: 74px;
-      padding: 0.55rem 0.8rem;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(251, 243, 248, 0.92));
-      border-color: rgba(156, 77, 124, 0.16);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
-    }
-
-    .badge-issuer-label {
-      margin: 0;
-      font-size: 0.76rem;
-      color: var(--ink-faint);
-      line-height: 1.35;
     }
 
     .badge-fallback {
@@ -457,149 +716,103 @@
       place-items: center;
       width: 100%;
       height: 100%;
-      border-radius: 8px;
-      background: linear-gradient(135deg, rgba(255, 246, 251, 1), rgba(244, 225, 236, 1));
-      color: #7b2f5f;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255, 245, 251, 1), rgba(240, 222, 233, 1));
+      color: var(--accent-deep);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .toggle-btn {
-      margin-top: 1rem;
-      border: 1px solid rgba(162, 64, 128, 0.25);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.88);
-      color: #6d2e56;
-      padding: 0.55rem 1rem;
-      font-weight: 600;
+    .library-panel {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(145, 40, 93, 0.12);
+      background: rgba(255, 255, 255, 0.7);
+      overflow: hidden;
+    }
+
+    .library-panel summary {
+      list-style: none;
       cursor: pointer;
-      transition: border-color 170ms ease, box-shadow 170ms ease;
+      padding: 18px 20px;
+      font-size: 1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    .toggle-btn:hover,
-    .toggle-btn:focus-visible {
-      border-color: rgba(224, 33, 138, 0.45);
-      box-shadow: 0 10px 24px rgba(154, 43, 112, 0.16);
+    .library-panel summary::-webkit-details-marker {
+      display: none;
     }
 
-    .catalog {
-      margin-top: 1rem;
+    .library-panel summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--accent-deep);
+    }
+
+    .library-panel[open] summary::after {
+      content: '-';
+    }
+
+    .library-inner {
+      padding: 0 20px 20px;
       display: grid;
-      gap: 1.2rem;
+      gap: 18px;
+    }
+
+    .catalog-groups {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .catalog-group {
       display: grid;
-      gap: 0.75rem;
+      gap: 12px;
     }
 
-    .catalog-group h3 {
-      margin: 0;
-      font-size: 1rem;
-      color: #6e2f58;
-      letter-spacing: -0.01em;
-    }
-
-    .catalog-grid {
+    .catalog-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 0.85rem;
+      gap: 12px;
     }
 
-    .catalog-item {
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(159, 76, 128, 0.2);
-      border-radius: var(--radius-md);
-      padding: 0.9rem;
+    .catalog-card {
       display: grid;
-      gap: 0.48rem;
+      gap: 12px;
     }
 
-    .catalog-item-header {
+    .catalog-card-head {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.6rem;
+      gap: 12px;
+      align-items: start;
     }
 
-    .catalog-item-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .catalog-card-copy {
+      display: grid;
+      gap: 8px;
       min-width: 0;
     }
 
-    .catalog-item h4 {
-      margin: 0;
-      font-size: 0.93rem;
-      line-height: 1.35;
-    }
-
-    .issuer {
-      font-size: 0.79rem;
-      color: var(--ink-faint);
-      margin: 0;
-    }
-
-    .catalog-item p {
-      margin: 0;
-      font-size: 0.83rem;
-      color: var(--ink-soft);
-      line-height: 1.42;
-    }
-
-    .catalog-item a {
-      justify-self: start;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #8f2c64;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(143, 44, 100, 0.25);
-    }
-
-    .catalog-item a:hover,
-    .catalog-item a:focus-visible {
-      border-bottom-color: currentColor;
-    }
-
-    .simple-list {
-      margin: 0;
-      padding-left: 1.1rem;
-      display: grid;
-      gap: 0.45rem;
-    }
-
-    .simple-list li {
-      color: #332c35;
-      font-size: 0.95rem;
+    .catalog-card-copy h4 {
+      font-size: 1rem;
+      line-height: 1.28;
     }
 
     .footer {
       text-align: center;
       color: var(--ink-faint);
-      font-size: 0.87rem;
-      padding-bottom: 0.9rem;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+      font-size: 0.86rem;
+      padding-bottom: 10px;
     }
 
     :focus-visible {
       outline: 2px solid var(--focus);
-      outline-offset: 2px;
+      outline-offset: 3px;
     }
 
-    @keyframes wheel {
+    @keyframes marquee {
       from {
         transform: translateX(0);
       }
@@ -608,42 +821,68 @@
       }
     }
 
-    @keyframes rise-in {
-      from {
-        opacity: 0;
-        transform: translateY(12px) scale(0.98);
+    @media (max-width: 980px) {
+      .hero,
+      .project-grid,
+      .background-grid,
+      .focus-grid,
+      .study-grid,
+      .catalog-groups {
+        grid-template-columns: 1fr;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
+
+      .snapshot-card {
+        grid-template-columns: auto 1fr;
+        align-items: center;
+      }
+
+      .avatar-frame {
+        width: min(160px, 40vw);
+        margin: 0;
       }
     }
 
-    @media (max-width: 680px) {
-      .container {
-        width: min(var(--max-width), 94vw);
-        gap: 1rem;
-        padding-top: 1rem;
+    @media (max-width: 740px) {
+      main {
+        width: min(var(--max-width), calc(100% - 18px));
+        padding-top: 14px;
       }
 
-      .panel {
+      .topbar,
+      .hero,
+      .section {
         border-radius: 22px;
       }
 
-      .badge-card {
-        width: 214px;
+      .topbar {
+        padding: 14px;
+        position: static;
       }
 
-      .language-card {
-        width: 168px;
+      .hero,
+      .section {
+        padding: 20px;
       }
 
-      .project-card {
-        min-height: 144px;
+      .nav-links {
+        justify-content: flex-start;
       }
 
-      .catalog-grid {
+      h1 {
+        max-width: 8ch;
+      }
+
+      .social-pill {
+        min-width: 0;
+        flex: 1 1 120px;
+      }
+
+      .snapshot-card {
         grid-template-columns: 1fr;
+      }
+
+      .roadmap-card {
+        width: 214px;
       }
     }
 
@@ -653,90 +892,138 @@
       *::after {
         animation: none !important;
         transition: none !important;
+        scroll-behavior: auto !important;
       }
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <header class="panel hero" id="top">
-      <div class="avatar-wrap">
-        <img class="avatar" src="avatar.jpg" alt="Ashley Denham profile photo">
+  <main>
+    <div class="topbar">
+      <a class="wordmark" href="#top">Ashley Denham</a>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#focus">Focus</a>
+        <a href="#work">Work</a>
+        <a href="#study">Study</a>
+        <a href="#background">Background</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+    </div>
+
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Personal profile</p>
+        <h1>Ashley Denham</h1>
+        <p class="lede">Building at the intersection of AI, healthcare, law, and leadership.</p>
+        <p class="support">Based in Adelaide, I am developing AI and machine learning capability while drawing on experience in nursing, aged care leadership, research, and professional study.</p>
+        <div class="hero-notes" aria-label="Profile highlights">
+          <span>Adelaide, Australia</span>
+          <span>AI / ML in progress</span>
+          <span>Healthcare systems background</span>
+        </div>
+        <nav aria-label="Social links" class="social-row" id="social-links"></nav>
       </div>
-      <h1>Ashley Denham</h1>
-      <p class="subtle">AI and technology learning, projects, and professional background from Adelaide, Australia.</p>
-      <nav aria-label="Social links" class="social-row" id="social-links"></nav>
+
+      <aside class="snapshot-card">
+        <div class="avatar-frame">
+          <img src="avatar.jpg" alt="Ashley Denham profile photo">
+        </div>
+        <div>
+          <p class="snapshot-kicker">Right now</p>
+          <h2 class="snapshot-title">What to know first</h2>
+        </div>
+        <ul class="fact-list">
+          <li><strong>Studying:</strong> Stanford AI, MIT ML / AI, and a Juris Doctor.</li>
+          <li><strong>Focused on:</strong> applied AI, automation, healthcare systems, and governance.</li>
+          <li><strong>Bringing:</strong> nursing leadership, aged care, clinical consulting, and research experience.</li>
+        </ul>
+      </aside>
     </header>
 
-    <section class="panel" aria-labelledby="projects-title">
+    <section class="section" id="focus" aria-labelledby="focus-title">
       <div class="section-head">
-        <h2 id="projects-title">Projects</h2>
+        <div>
+          <p class="section-kicker">What this site should tell you fast</p>
+          <h2 class="section-title" id="focus-title">Current focus</h2>
+        </div>
+        <p class="section-note">The areas below reflect where I am investing time, building technical depth, and combining prior experience with new capability.</p>
       </div>
-      <div class="projects-grid" id="projects-grid"></div>
-    </section>
-
-    <section class="panel" aria-labelledby="it-credentials-title">
-      <div class="section-head">
-        <h2 id="it-credentials-title">IT Degrees and Certifications</h2>
-        <p class="section-kicker">Badge gallery</p>
-      </div>
-      <div class="wheel-wrap" aria-label="Featured IT credentials" id="it-wheel-wrap">
-        <div class="wheel-track" id="it-wheel-track"></div>
-      </div>
-
-      <button type="button" class="toggle-btn" id="catalog-toggle" aria-expanded="false" aria-controls="credential-catalog">
-        View full credential list
-      </button>
-      <div id="credential-catalog" class="catalog" hidden></div>
-    </section>
-
-    <section class="panel" aria-labelledby="languages-title">
-      <div class="section-head">
-        <h2 id="languages-title">Coding Languages I Know</h2>
-        <p class="section-kicker">Language badges</p>
-      </div>
-      <div class="wheel-wrap" aria-label="Coding language badges" id="language-wheel-wrap">
-        <div class="wheel-track" id="language-wheel-track"></div>
+      <div class="focus-grid" id="focus-grid"></div>
+      <div class="tools-band">
+        <p class="tools-label">Working with</p>
+        <div class="tools-strip" id="tools-strip"></div>
       </div>
     </section>
 
-    <section class="panel" aria-labelledby="non-it-title">
+    <section class="section" id="work" aria-labelledby="work-title">
       <div class="section-head">
-        <h2 id="non-it-title">Non-IT Qualifications</h2>
+        <div>
+          <p class="section-kicker">Proof over posture</p>
+          <h2 class="section-title" id="work-title">Selected work</h2>
+        </div>
+        <p class="section-note">A small set of public work that shows current technical direction and what I am actively building around.</p>
       </div>
-      <ul class="simple-list">
-        <li>Juris Doctor (in progress), Flinders University</li>
-        <li>Master of Business Administration, University of Adelaide</li>
-        <li>Master of Nursing (Gerontology), University of Tasmania</li>
-        <li>Graduate Diploma in Nursing (Gerontology)</li>
-        <li>Graduate Certificate in Nursing (Gerontology)</li>
-        <li>Bachelor of Science (Nursing), University of South Australia</li>
-        <li>Dare to Lead training</li>
-        <li>Bachelor of Laws, University of South Australia</li>
-        <li>Certificate III in Individual Support (Ageing)</li>
-      </ul>
+      <div class="project-grid" id="projects-grid"></div>
     </section>
 
-    <section class="panel" aria-labelledby="careers-title">
+    <section class="section" id="study" aria-labelledby="study-title">
       <div class="section-head">
-        <h2 id="careers-title">Previous Careers</h2>
+        <div>
+          <p class="section-kicker">In progress now</p>
+          <h2 class="section-title" id="study-title">Study and development</h2>
+        </div>
+        <p class="section-note">These are the active programs and study tracks shaping the next phase of my work.</p>
       </div>
-      <ul class="simple-list">
-        <li>Director of Nursing for a large South Australian RACF</li>
-        <li>Gerontological nursing research</li>
-        <li>Clinical Nurse Consultant (Aged Care)</li>
-        <li>Completed graduate programs in Anaesthetics and Recovery Nursing, and Gerontological Nursing</li>
-        <li>Carer (Aged Care)</li>
-      </ul>
+      <div class="study-grid" id="current-study-grid"></div>
+    </section>
+
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Context and credibility</p>
+          <h2 class="section-title" id="background-title">Background</h2>
+        </div>
+        <p class="section-note">Previous roles and qualifications provide the context behind how I approach technology, leadership, and responsible decision-making.</p>
+      </div>
+      <div class="background-grid">
+        <article class="story-card">
+          <p class="mini-kicker">Professional background</p>
+          <h3>Career highlights</h3>
+          <ul id="career-list"></ul>
+        </article>
+        <article class="story-card">
+          <p class="mini-kicker">Academic and professional study</p>
+          <h3>Qualifications beyond IT</h3>
+          <ul id="qualifications-list"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Progressive disclosure</p>
+          <h2 class="section-title" id="roadmap-title">IT credential roadmap</h2>
+        </div>
+        <p class="section-note">A view of the technical certifications and pathways I am planning around current study.</p>
+      </div>
+      <div class="roadmap-wrap" aria-label="Planned IT credentials">
+        <div class="roadmap-track" id="roadmap-track"></div>
+      </div>
+      <details class="library-panel" id="library-panel">
+        <summary>Browse the full IT credential library</summary>
+        <div class="library-inner">
+          <div class="catalog-groups" id="credential-catalog"></div>
+        </div>
+      </details>
     </section>
 
     <footer class="footer">
-      <span id="footer-year"></span> Ashley Denham
+      <span id="footer-year"></span> Ashley Denham | Adelaide, Australia
     </footer>
   </main>
 
   <script>
-    // Editable content blocks
     const SOCIAL_LINKS = [
       { label: 'GitHub', url: 'https://github.com/ashleydenham', enabled: true },
       { label: 'X', url: 'https://x.com/AshleyDenham', enabled: true },
@@ -744,16 +1031,63 @@
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ashley-denham-35a3662b/', enabled: true }
     ];
 
+    const FOCUS_PILLARS = [
+      {
+        title: 'Applied AI and automation',
+        summary: 'Developing practical AI and ML capability with an emphasis on useful systems, automation, and technical fluency rather than empty signaling.'
+      },
+      {
+        title: 'Healthcare systems and leadership',
+        summary: 'Bringing aged care, nursing leadership, and clinical context into how I think about process design, risk, and technology adoption.'
+      },
+      {
+        title: 'Law, business, and governance',
+        summary: 'Studying the legal and business structures that shape responsible use of AI, decision-making, and institutional change.'
+      }
+    ];
+
     const PROJECTS = [
       {
         name: 'AshleyDenham',
         url: 'https://github.com/ashleydenham/AshleyDenham',
-        summary: 'Personal website and profile source.'
+        summary: 'Personal website and profile source.',
+        label: 'Profile site'
       },
       {
         name: 'Automate-Adelaide',
         url: 'https://github.com/ashleydenham/Automate-Adelaide',
-        summary: 'Website for Automate Adelaide.'
+        summary: 'Website for Automate Adelaide.',
+        label: 'Project'
+      }
+    ];
+
+    const CURRENT_STUDY = [
+      {
+        title: 'Stanford Artificial Intelligence Graduate Certificate',
+        issuer: 'Stanford Online',
+        status: 'in-progress',
+        summary: 'Graduate-level AI study covering machine learning, NLP, robotics, and ethics.',
+        url: 'https://online.stanford.edu/programs/artificial-intelligence-graduate-certificate',
+        imageSrc: 'assets/badges/stanford.png',
+        imageAlt: 'Stanford University logo'
+      },
+      {
+        title: 'MIT Professional Certificate Program in Machine Learning and Artificial Intelligence',
+        issuer: 'MIT Professional Education',
+        status: 'in-progress',
+        summary: 'Professional study in ML algorithms, deep learning, and applied AI.',
+        url: 'https://professional.mit.edu/course-catalog/professional-certificate-program-machine-learning-artificial-intelligence',
+        imageSrc: 'assets/badges/mit.svg',
+        imageAlt: 'MIT logo'
+      },
+      {
+        title: 'Juris Doctor',
+        issuer: 'Flinders University',
+        status: 'in-progress',
+        summary: 'Legal study that complements work in governance, policy, and responsible technology adoption.',
+        url: '',
+        imageSrc: '',
+        imageAlt: 'Juris Doctor initials'
       }
     ];
 
@@ -918,63 +1252,79 @@
       {
         name: 'Python',
         url: 'https://www.python.org/',
-        summary: 'Dominant language for AI, ML, data, and automation.',
         imageSrc: 'assets/badges/python.svg',
         imageAlt: 'Python logo'
       },
       {
         name: 'JavaScript / TypeScript',
         url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-        summary: 'Core web stack language pair for modern front-end and back-end apps.',
         imageSrc: 'assets/badges/javascript-typescript.svg',
         imageAlt: 'JavaScript and TypeScript logos'
       },
       {
         name: 'Java',
         url: 'https://www.oracle.com/java/',
-        summary: 'Strong enterprise and backend platform language.',
         imageSrc: 'assets/badges/java.svg',
         imageAlt: 'Java logo'
       },
       {
         name: 'C#',
         url: 'https://dotnet.microsoft.com/en-us/learn',
-        summary: 'Part of the .NET ecosystem for web, cloud, and app development.',
         imageSrc: 'assets/badges/csharp.svg',
         imageAlt: 'C sharp logo'
       },
       {
         name: 'Rust',
         url: 'https://www.rust-lang.org/',
-        summary: 'Safety-focused systems language with high performance.',
         imageSrc: 'assets/badges/rust.svg',
         imageAlt: 'Rust logo'
       },
       {
         name: 'Go (Golang)',
         url: 'https://go.dev/',
-        summary: 'Cloud-native and service-oriented language with simple concurrency.',
         imageSrc: 'assets/badges/go.svg',
         imageAlt: 'Go logo'
       },
       {
         name: 'C++',
         url: 'https://isocpp.org/',
-        summary: 'Performance-critical language for systems and embedded work.',
         imageSrc: 'assets/badges/cplusplus.svg',
         imageAlt: 'C plus plus logo'
       }
     ];
 
-    const IT_BADGE_FEATURED_ORDER = [
-      'stanford-ai-gc',
-      'mit-ml-ai-cert',
+    const NON_IT_QUALIFICATIONS = [
+      'Juris Doctor (in progress), Flinders University',
+      'Master of Business Administration, University of Adelaide',
+      'Master of Nursing (Gerontology), University of Tasmania',
+      'Graduate Diploma in Nursing (Gerontology)',
+      'Graduate Certificate in Nursing (Gerontology)',
+      'Bachelor of Science (Nursing), University of South Australia',
+      'Dare to Lead training',
+      'Bachelor of Laws, University of South Australia',
+      'Certificate III in Individual Support (Ageing)'
+    ];
+
+    const CAREER_HIGHLIGHTS = [
+      'Director of Nursing for a large South Australian RACF',
+      'Gerontological nursing research',
+      'Clinical Nurse Consultant (Aged Care)',
+      'Completed graduate programs in Anaesthetics and Recovery Nursing, and Gerontological Nursing',
+      'Carer (Aged Care)'
+    ];
+
+    const ROADMAP_ORDER = [
       'gcp-ml-engineer',
       'ml-specialization-andrew-ng',
       'azure-ai-engineer',
+      'ibm-ai-engineering',
+      'gcp-data-engineer',
       'aws-ml-specialty',
+      'deeplearningai-courses',
       'databricks-genai-assoc',
+      'nvidia-dli',
       'arduino-certification',
+      'arduino-junior-certification',
       'raspberry-pi-specialization'
     ];
 
@@ -993,11 +1343,11 @@
         .filter(Boolean)
         .slice(0, 2);
 
-      if (!words.length) return 'IT';
+      if (!words.length) return 'AD';
       return words.map((word) => word[0].toUpperCase()).join('');
     }
 
-    function badgeMediaHtml(item, modifierClass = '') {
+    function badgeMediaHtml(item, modifierClass) {
       const mediaClass = ['badge-media', modifierClass].filter(Boolean).join(' ');
       const label = item.title || item.name || item.issuer || 'Badge';
       const safeAlt = escapeHtml(item.imageAlt || label);
@@ -1005,13 +1355,13 @@
       const safeFallback = escapeHtml(fallbackLabel(label));
 
       if (!item.imageSrc) {
-        return `<span class="${mediaClass}"><span class="badge-fallback">${safeFallback}</span></span>`;
+        return '<span class="' + mediaClass + '"><span class="badge-fallback">' + safeFallback + '</span></span>';
       }
 
-      return `<span class="${mediaClass}">
-        <img src="${safeSrc}" alt="${safeAlt}" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <span class="badge-fallback" style="display:none;">${safeFallback}</span>
-      </span>`;
+      return '<span class="' + mediaClass + '">' +
+        '<img src="' + safeSrc + '" alt="' + safeAlt + '" decoding="async" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
+        '<span class="badge-fallback" style="display:none;">' + safeFallback + '</span>' +
+      '</span>';
     }
 
     function statusMeta(status) {
@@ -1025,107 +1375,96 @@
         return { label: 'Planned', className: 'status-planned' };
       }
 
-      if (normalized === 'skill' || normalized === 'language') {
-        return { label: 'Language', className: 'status-skill' };
-      }
-
-      if (normalized === 'completed' || normalized === 'earned') {
-        return { label: 'Completed', className: '' };
-      }
-
       return { label: 'Credential', className: '' };
-    }
-
-    function credentialTypeLabel(item) {
-      const title = String(item.title || '').toLowerCase();
-
-      if (title.includes('graduate certificate')) return 'Graduate certificate';
-      if (title.includes('professional certificate')) return 'Professional certificate';
-      if (title.includes('short courses')) return 'Course collection';
-      if (title.includes('specialization')) return 'Specialization';
-      if (title.includes('associate')) return 'Associate certification';
-      if (title.includes('specialty')) return 'Specialty certification';
-      if (title.includes('professional')) return 'Professional certification';
-      if (title.includes('certification') || title.includes('certified')) return 'Certification';
-      return 'Credential';
     }
 
     function renderSocialLinks() {
       const container = document.getElementById('social-links');
-      container.innerHTML = SOCIAL_LINKS.map((item) => {
-        const attrs = item.enabled
-          ? `href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer"`
-          : `href="#" aria-disabled="true" data-disabled="true"`;
-
-        const suffix = item.enabled ? '' : ' <span aria-hidden="true">(coming soon)</span>';
-
-        return `<a class="pill" ${attrs}>${escapeHtml(item.label)}${suffix}</a>`;
+      container.innerHTML = SOCIAL_LINKS.filter((item) => item.enabled).map((item) => {
+        return '<a class="social-pill" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.label) + '</a>';
       }).join('');
+    }
 
-      container.querySelectorAll('[data-disabled="true"]').forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-        });
-      });
+    function renderFocusGrid() {
+      const container = document.getElementById('focus-grid');
+      container.innerHTML = FOCUS_PILLARS.map((item, index) => {
+        return '<article class="focus-card">' +
+          '<span class="focus-index">0' + (index + 1) + '</span>' +
+          '<h3>' + escapeHtml(item.title) + '</h3>' +
+          '<p>' + escapeHtml(item.summary) + '</p>' +
+        '</article>';
+      }).join('');
+    }
+
+    function renderToolsStrip() {
+      const container = document.getElementById('tools-strip');
+      container.innerHTML = LANGUAGE_BADGES.map((item) => {
+        return '<a class="tool-chip" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' +
+          badgeMediaHtml(item, 'badge-media--small') +
+          '<span>' + escapeHtml(item.name) + '</span>' +
+        '</a>';
+      }).join('');
     }
 
     function renderProjects() {
-      const grid = document.getElementById('projects-grid');
-      grid.innerHTML = PROJECTS.map((project) => {
-        return `<a class="project-card" href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer">
-          <h3>${escapeHtml(project.name)}</h3>
-          <p>${escapeHtml(project.summary)}</p>
-          <span class="project-link">Open project</span>
-        </a>`;
+      const container = document.getElementById('projects-grid');
+      container.innerHTML = PROJECTS.map((item) => {
+        return '<a class="project-card" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' +
+          '<div class="project-meta"><span>' + escapeHtml(item.label) + '</span><span>GitHub</span></div>' +
+          '<h3>' + escapeHtml(item.name) + '</h3>' +
+          '<p>' + escapeHtml(item.summary) + '</p>' +
+          '<span class="project-link">Open project</span>' +
+        '</a>';
       }).join('');
     }
 
-    function renderCredentialBadgeCard(item) {
-      const status = statusMeta(item.status);
+    function renderStudyCards() {
+      const container = document.getElementById('current-study-grid');
+      container.innerHTML = CURRENT_STUDY.map((item) => {
+        const status = statusMeta(item.status);
+        const body = '<article class="study-card">' +
+          '<div class="accent-bar ' + status.className + '"></div>' +
+          '<div class="study-card-body">' +
+            '<div class="study-meta">' +
+              '<div><p class="mini-kicker">' + escapeHtml(item.issuer) + '</p></div>' +
+              '<span class="status-chip ' + status.className + '">' + escapeHtml(status.label) + '</span>' +
+            '</div>' +
+            badgeMediaHtml(item) +
+            '<h3>' + escapeHtml(item.title) + '</h3>' +
+            '<p>' + escapeHtml(item.summary) + '</p>' +
+            (item.url ? '<a class="study-link" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">Open program</a>' : '<span class="study-link" aria-disabled="true">Current study</span>') +
+          '</div>' +
+        '</article>';
 
-      return `<a class="badge-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
-        <div class="badge-ribbon ${status.className}"></div>
-        <div class="badge-content">
-          <div class="badge-meta">
-            <span class="badge-type">${escapeHtml(credentialTypeLabel(item))}</span>
-            <span class="status-chip ${status.className}">${escapeHtml(status.label)}</span>
-          </div>
-          ${badgeMediaHtml(item)}
-          <h3 class="badge-title">${escapeHtml(item.title)}</h3>
-          <p class="badge-issuer-label">${escapeHtml(item.issuer)}</p>
-        </div>
-      </a>`;
+        return body;
+      }).join('');
     }
 
-    function renderLanguageBadgeCard(item) {
-      return `<a class="language-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
-        <div class="language-top">
-          ${badgeMediaHtml(item, 'badge-media--language')}
-          <span class="status-chip status-skill">Language</span>
-        </div>
-        <h3 class="language-title">${escapeHtml(item.name)}</h3>
-      </a>`;
+    function renderSimpleList(id, items) {
+      const container = document.getElementById(id);
+      container.innerHTML = items.map((item) => '<li>' + escapeHtml(item) + '</li>').join('');
     }
 
-    function renderWheel(trackId, cardsHtml, duration) {
-      const track = document.getElementById(trackId);
-      track.style.setProperty('--duration', duration);
-      track.innerHTML = `<div class="wheel-group">${cardsHtml}</div><div class="wheel-group" aria-hidden="true">${cardsHtml}</div>`;
-    }
-
-    function renderFeaturedCredentialsWheel() {
+    function renderRoadmap() {
       const credentialMap = new Map(IT_CREDENTIALS.map((item) => [item.id, item]));
-      const featured = IT_BADGE_FEATURED_ORDER
-        .map((id) => credentialMap.get(id))
-        .filter(Boolean);
+      const roadmapItems = ROADMAP_ORDER.map((id) => credentialMap.get(id)).filter(Boolean);
+      const cardsHtml = roadmapItems.map((item) => {
+        const status = statusMeta(item.status);
+        return '<a class="roadmap-card" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' +
+          '<div class="accent-bar ' + status.className + '"></div>' +
+          '<div class="roadmap-body">' +
+            '<div class="roadmap-meta">' +
+              '<p class="mini-kicker">' + escapeHtml(item.issuer) + '</p>' +
+              '<span class="status-chip ' + status.className + '">' + escapeHtml(status.label) + '</span>' +
+            '</div>' +
+            badgeMediaHtml(item) +
+            '<h3>' + escapeHtml(item.title) + '</h3>' +
+          '</div>' +
+        '</a>';
+      }).join('');
 
-      const cardsHtml = featured.map(renderCredentialBadgeCard).join('');
-      renderWheel('it-wheel-track', cardsHtml, '40s');
-    }
-
-    function renderLanguagesWheel() {
-      const cardsHtml = LANGUAGE_BADGES.map(renderLanguageBadgeCard).join('');
-      renderWheel('language-wheel-track', cardsHtml, '28s');
+      const track = document.getElementById('roadmap-track');
+      track.innerHTML = '<div class="roadmap-group">' + cardsHtml + '</div><div class="roadmap-group" aria-hidden="true">' + cardsHtml + '</div>';
     }
 
     function renderCredentialCatalog() {
@@ -1134,67 +1473,53 @@
         'Arduino and Raspberry Pi'
       ];
 
-      const catalog = document.getElementById('credential-catalog');
       const grouped = new Map();
-
       IT_CREDENTIALS.forEach((item) => {
         const bucket = grouped.get(item.category) || [];
         bucket.push(item);
         grouped.set(item.category, bucket);
       });
 
-      const groupsHtml = categoryOrder
-        .filter((category) => grouped.has(category))
-        .map((category) => {
-          const cards = grouped.get(category).map((item) => {
-            const status = statusMeta(item.status);
-
-            return `<article class="catalog-item">
-              <div class="catalog-item-header">
-                <div class="catalog-item-title">
-                  ${badgeMediaHtml(item, 'badge-media--catalog')}
-                  <h4>${escapeHtml(item.title)}</h4>
-                </div>
-                <span class="status-chip ${status.className}">${escapeHtml(status.label)}</span>
-              </div>
-              <p class="issuer">${escapeHtml(item.issuer)}</p>
-              <p>${escapeHtml(item.summary)}</p>
-              <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">Open credential</a>
-            </article>`;
-          }).join('');
-
-          return `<section class="catalog-group">
-            <h3>${escapeHtml(category)}</h3>
-            <div class="catalog-grid">${cards}</div>
-          </section>`;
+      const container = document.getElementById('credential-catalog');
+      container.innerHTML = categoryOrder.filter((category) => grouped.has(category)).map((category) => {
+        const itemsHtml = grouped.get(category).map((item) => {
+          const status = statusMeta(item.status);
+          return '<article class="catalog-card">' +
+            '<div class="catalog-card-head">' +
+              badgeMediaHtml(item, 'badge-media--small') +
+              '<div class="catalog-card-copy">' +
+                '<div class="catalog-meta">' +
+                  '<p class="mini-kicker">' + escapeHtml(item.issuer) + '</p>' +
+                  '<span class="status-chip ' + status.className + '">' + escapeHtml(status.label) + '</span>' +
+                '</div>' +
+                '<h4>' + escapeHtml(item.title) + '</h4>' +
+              '</div>' +
+            '</div>' +
+            '<p>' + escapeHtml(item.summary) + '</p>' +
+            '<a class="catalog-link" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">Open credential</a>' +
+          '</article>';
         }).join('');
 
-      catalog.innerHTML = groupsHtml;
-    }
-
-    function bindCredentialToggle() {
-      const button = document.getElementById('catalog-toggle');
-      const catalog = document.getElementById('credential-catalog');
-
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        const next = !expanded;
-        button.setAttribute('aria-expanded', String(next));
-        button.textContent = next ? 'Hide full credential list' : 'View full credential list';
-        catalog.hidden = !next;
-      });
+        return '<section class="catalog-group">' +
+          '<h3>' + escapeHtml(category) + '</h3>' +
+          '<div class="catalog-list">' + itemsHtml + '</div>' +
+        '</section>';
+      }).join('');
     }
 
     function initFooterYear() {
-      document.getElementById('footer-year').textContent = `(c) ${new Date().getFullYear()}`;
+      document.getElementById('footer-year').textContent = '(c) ' + new Date().getFullYear();
     }
 
     renderSocialLinks();
+    renderFocusGrid();
+    renderToolsStrip();
     renderProjects();
-    renderFeaturedCredentialsWheel();
-    renderLanguagesWheel();
+    renderStudyCards();
+    renderSimpleList('career-list', CAREER_HIGHLIGHTS);
+    renderSimpleList('qualifications-list', NON_IT_QUALIFICATIONS);
+    renderRoadmap();
     renderCredentialCatalog();
-    bindCredentialToggle();
     initFooterYear();
   </script>
 </body>
