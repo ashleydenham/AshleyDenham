@@ -20,6 +20,8 @@ Personal homepage for **Ashley Denham**.
 |-- 404.html        # Custom 404 page
 |-- avatar.jpg      # Profile photo
 |-- CNAME           # Custom domain config
+|-- assets/
+|   `-- badges/     # Local logo assets used by credential and language badges
 `-- .github/
     `-- workflows/
         `-- jekyll-gh-pages.yml
@@ -46,15 +48,16 @@ At the top of the `<script>` block in `index.html`:
 - `PROJECTS`
   - fields: `name`, `url`, `summary`
 - `IT_CREDENTIALS`
-  - fields: `id`, `title`, `issuer`, `category`, `status`, `url`, `summary`, `iconKey`
+  - fields: `id`, `title`, `issuer`, `category`, `status`, `url`, `summary`, `imageSrc`, `imageAlt`
 - `LANGUAGE_BADGES`
-  - fields: `name`, `url`, `summary`, `iconKey`
+  - fields: `name`, `url`, `summary`, `imageSrc`, `imageAlt`
 - `IT_BADGE_FEATURED_ORDER`
   - array of credential `id` values used in the featured auto-scroll wheel
 
 ## Interaction Notes
 
 - Badge wheels auto-scroll horizontally and pause on hover/focus.
+- Badge logos are served from local files in `assets/badges/` to avoid external image failures.
 - "View all IT credentials" expands/collapses the full categorized catalog.
 - LinkedIn button is intentionally set as a placeholder (`enabled: false`) until the final profile URL is added.
 

@@ -277,25 +277,25 @@
     .language-card {
       display: grid;
       align-content: start;
-      gap: 0.48rem;
-      min-height: 132px;
+      gap: 0.68rem;
+      min-height: 116px;
       border-radius: var(--radius-md);
       border: 1px solid rgba(157, 79, 129, 0.2);
       background: rgba(255, 255, 255, 0.94);
-      padding: 0.82rem;
+      padding: 0.9rem;
       text-decoration: none;
       color: inherit;
       transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
     }
 
     .badge-card {
-      width: 278px;
+      width: 232px;
     }
 
     .language-card {
-      width: 210px;
+      width: 184px;
       min-height: 104px;
-      justify-content: center;
+      justify-content: start;
     }
 
     .badge-card:hover,
@@ -313,6 +313,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 0.6rem;
+      min-height: 42px;
     }
 
     .status-chip {
@@ -343,33 +344,65 @@
     .badge-title,
     .language-title {
       margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.3;
+      font-size: 0.9rem;
+      line-height: 1.28;
       letter-spacing: -0.01em;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .badge-title {
-      min-height: 2.5em;
+      min-height: 3.6em;
+      -webkit-line-clamp: 3;
     }
 
-    .badge-summary,
-    .language-summary {
-      margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.82rem;
-      line-height: 1.45;
+    .language-title {
+      -webkit-line-clamp: 2;
     }
 
-    .badge-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: inline-grid;
-      place-items: center;
-      flex: 0 0 34px;
+    .badge-media {
+      width: 104px;
+      height: 42px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
       border: 1px solid rgba(121, 60, 106, 0.25);
       overflow: hidden;
       background: #fff;
+      padding: 0.4rem 0.55rem;
+    }
+
+    .badge-media--language {
+      width: 82px;
+    }
+
+    .badge-media--catalog {
+      width: 74px;
+      height: 48px;
+      padding: 0.45rem 0.55rem;
+    }
+
+    .badge-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .badge-fallback {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 246, 251, 1), rgba(244, 225, 236, 1));
+      color: #7b2f5f;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
     }
 
     .toggle-btn {
@@ -538,11 +571,11 @@
       }
 
       .badge-card {
-        width: 240px;
+        width: 214px;
       }
 
       .language-card {
-        width: 180px;
+        width: 168px;
       }
 
       .project-card {
@@ -673,7 +706,8 @@
         status: 'Undertaking',
         url: 'https://online.stanford.edu/programs/artificial-intelligence-graduate-certificate',
         summary: 'Graduate-level AI certificate covering ML, NLP, robotics, and ethics.',
-        iconKey: 'stanford'
+        imageSrc: 'assets/badges/stanford.png',
+        imageAlt: 'Stanford University logo'
       },
       {
         id: 'mit-ml-ai-cert',
@@ -683,7 +717,8 @@
         status: 'Undertaking',
         url: 'https://professional.mit.edu/course-catalog/professional-certificate-program-machine-learning-artificial-intelligence',
         summary: 'Rigorous professional program in ML algorithms, deep learning, and AI applications.',
-        iconKey: 'mit'
+        imageSrc: 'assets/badges/mit.svg',
+        imageAlt: 'MIT logo'
       },
       {
         id: 'gcp-ml-engineer',
@@ -693,7 +728,8 @@
         status: 'Listed',
         url: 'https://cloud.google.com/learn/certification/machine-learning-engineer',
         summary: 'Production ML design, deployment, and scaling on GCP and Vertex AI.',
-        iconKey: 'google-cloud'
+        imageSrc: 'assets/badges/google-cloud.svg',
+        imageAlt: 'Google Cloud logo'
       },
       {
         id: 'ml-specialization-andrew-ng',
@@ -703,7 +739,8 @@
         status: 'Listed',
         url: 'https://www.coursera.org/specializations/machine-learning-introduction',
         summary: 'Foundational and advanced ML specialization with a strong industry profile.',
-        iconKey: 'coursera'
+        imageSrc: 'assets/badges/coursera.svg',
+        imageAlt: 'Coursera logo'
       },
       {
         id: 'azure-ai-engineer',
@@ -713,7 +750,8 @@
         status: 'Listed',
         url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer',
         summary: 'Builds and deploys AI solutions across Azure Cognitive and generative services.',
-        iconKey: 'microsoft'
+        imageSrc: 'assets/badges/azure.svg',
+        imageAlt: 'Microsoft Azure logo'
       },
       {
         id: 'ibm-ai-engineering',
@@ -723,7 +761,8 @@
         status: 'Listed',
         url: 'https://www.coursera.org/professional-certificates/ibm-ai-engineering',
         summary: 'Hands-on deep learning and scalable ML engineering with PyTorch workflows.',
-        iconKey: 'ibm'
+        imageSrc: 'assets/badges/ibm.svg',
+        imageAlt: 'IBM logo'
       },
       {
         id: 'gcp-data-engineer',
@@ -733,7 +772,8 @@
         status: 'Listed',
         url: 'https://cloud.google.com/learn/certification/data-engineer',
         summary: 'Data pipelines and infrastructure skills often paired with ML engineering.',
-        iconKey: 'google-cloud'
+        imageSrc: 'assets/badges/google-cloud.svg',
+        imageAlt: 'Google Cloud logo'
       },
       {
         id: 'aws-ml-specialty',
@@ -743,7 +783,8 @@
         status: 'Listed',
         url: 'https://aws.amazon.com/certification/certified-machine-learning-specialty/',
         summary: 'Enterprise-level AWS ML capability with SageMaker and deployment focus.',
-        iconKey: 'aws'
+        imageSrc: 'assets/badges/aws.svg',
+        imageAlt: 'AWS logo'
       },
       {
         id: 'deeplearningai-courses',
@@ -753,7 +794,8 @@
         status: 'Listed',
         url: 'https://www.deeplearning.ai/courses/',
         summary: 'Applied short courses in generative AI, LLM tooling, and modern workflows.',
-        iconKey: 'deeplearningai'
+        imageSrc: 'assets/badges/deeplearning-ai.png',
+        imageAlt: 'DeepLearning.AI logo'
       },
       {
         id: 'databricks-genai-assoc',
@@ -763,7 +805,8 @@
         status: 'Listed',
         url: 'https://www.databricks.com/learn/certification/genai-engineer-associate',
         summary: 'GenAI engineering focused on scalable LLM workloads in Databricks.',
-        iconKey: 'databricks'
+        imageSrc: 'assets/badges/databricks.svg',
+        imageAlt: 'Databricks logo'
       },
       {
         id: 'nvidia-dli',
@@ -773,7 +816,8 @@
         status: 'Listed',
         url: 'https://www.nvidia.com/en-us/training/',
         summary: 'GPU-accelerated AI and deep learning training for high-performance computing.',
-        iconKey: 'nvidia'
+        imageSrc: 'assets/badges/nvidia.svg',
+        imageAlt: 'NVIDIA logo'
       },
       {
         id: 'arduino-certification',
@@ -783,7 +827,8 @@
         status: 'Listed',
         url: 'https://www.arduino.cc/education/certification',
         summary: 'Official certification for Arduino electronics and physical computing skills.',
-        iconKey: 'arduino'
+        imageSrc: 'assets/badges/arduino.svg',
+        imageAlt: 'Arduino logo'
       },
       {
         id: 'arduino-junior-certification',
@@ -793,7 +838,8 @@
         status: 'Listed',
         url: 'https://www.arduino.cc/education/certifications',
         summary: 'Entry-level Arduino credential for core electronics and programming concepts.',
-        iconKey: 'arduino'
+        imageSrc: 'assets/badges/arduino.svg',
+        imageAlt: 'Arduino logo'
       },
       {
         id: 'raspberry-pi-specialization',
@@ -803,7 +849,8 @@
         status: 'Listed',
         url: 'https://www.coursera.org/specializations/raspberry-pi',
         summary: 'University-backed Raspberry Pi projects with hardware interfacing and Python.',
-        iconKey: 'raspberry-pi'
+        imageSrc: 'assets/badges/raspberry-pi.svg',
+        imageAlt: 'Raspberry Pi logo'
       }
     ];
 
@@ -812,43 +859,50 @@
         name: 'Python',
         url: 'https://www.python.org/',
         summary: 'Dominant language for AI, ML, data, and automation.',
-        iconKey: 'python'
+        imageSrc: 'assets/badges/python.svg',
+        imageAlt: 'Python logo'
       },
       {
         name: 'JavaScript / TypeScript',
         url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
         summary: 'Core web stack language pair for modern front-end and back-end apps.',
-        iconKey: 'javascript-typescript'
+        imageSrc: 'assets/badges/javascript-typescript.svg',
+        imageAlt: 'JavaScript and TypeScript logos'
       },
       {
         name: 'Java',
         url: 'https://www.oracle.com/java/',
         summary: 'Strong enterprise and backend platform language.',
-        iconKey: 'java'
+        imageSrc: 'assets/badges/java.svg',
+        imageAlt: 'Java logo'
       },
       {
         name: 'C#',
         url: 'https://dotnet.microsoft.com/en-us/learn',
         summary: 'Part of the .NET ecosystem for web, cloud, and app development.',
-        iconKey: 'csharp'
+        imageSrc: 'assets/badges/csharp.svg',
+        imageAlt: 'C sharp logo'
       },
       {
         name: 'Rust',
         url: 'https://www.rust-lang.org/',
         summary: 'Safety-focused systems language with high performance.',
-        iconKey: 'rust'
+        imageSrc: 'assets/badges/rust.svg',
+        imageAlt: 'Rust logo'
       },
       {
         name: 'Go (Golang)',
         url: 'https://go.dev/',
         summary: 'Cloud-native and service-oriented language with simple concurrency.',
-        iconKey: 'go'
+        imageSrc: 'assets/badges/go.svg',
+        imageAlt: 'Go logo'
       },
       {
         name: 'C++',
         url: 'https://isocpp.org/',
         summary: 'Performance-critical language for systems and embedded work.',
-        iconKey: 'cplusplus'
+        imageSrc: 'assets/badges/cplusplus.svg',
+        imageAlt: 'C plus plus logo'
       }
     ];
 
@@ -864,29 +918,6 @@
       'raspberry-pi-specialization'
     ];
 
-    const ICON_STYLE = {
-      stanford: { label: 'SU', bg: '#8c1515', fg: '#ffffff' },
-      mit: { label: 'MIT', bg: '#a31f34', fg: '#ffffff' },
-      'google-cloud': { label: 'GCP', bg: '#1a73e8', fg: '#ffffff' },
-      coursera: { label: 'C', bg: '#0056d2', fg: '#ffffff' },
-      microsoft: { label: 'MS', bg: '#0067b8', fg: '#ffffff' },
-      ibm: { label: 'IBM', bg: '#0f62fe', fg: '#ffffff' },
-      aws: { label: 'AWS', bg: '#ff9900', fg: '#111111' },
-      deeplearningai: { label: 'DLAI', bg: '#1d2437', fg: '#ffffff' },
-      databricks: { label: 'DB', bg: '#ff3621', fg: '#ffffff' },
-      nvidia: { label: 'NV', bg: '#76b900', fg: '#0a0a0a' },
-      arduino: { label: 'A', bg: '#00878f', fg: '#ffffff' },
-      'raspberry-pi': { label: 'RP', bg: '#bc1142', fg: '#ffffff' },
-      python: { label: 'PY', bg: '#306998', fg: '#ffd343' },
-      'javascript-typescript': { label: 'JS/TS', bg: '#1f2937', fg: '#facc15' },
-      java: { label: 'J', bg: '#007396', fg: '#ffffff' },
-      csharp: { label: 'C#', bg: '#68217a', fg: '#ffffff' },
-      rust: { label: 'RS', bg: '#111111', fg: '#f8f3ea' },
-      go: { label: 'GO', bg: '#00add8', fg: '#05232b' },
-      cplusplus: { label: 'C++', bg: '#00599c', fg: '#ffffff' },
-      default: { label: 'IT', bg: '#6b7280', fg: '#ffffff' }
-    };
-
     function escapeHtml(value) {
       return String(value)
         .replace(/&/g, '&amp;')
@@ -896,15 +927,31 @@
         .replace(/'/g, '&#39;');
     }
 
-    function iconSvg(iconKey, title) {
-      const icon = ICON_STYLE[iconKey] || ICON_STYLE.default;
-      const safeTitle = escapeHtml(title);
-      const safeLabel = escapeHtml(icon.label);
+    function fallbackLabel(text) {
+      const words = String(text || '')
+        .split(/[^A-Za-z0-9]+/)
+        .filter(Boolean)
+        .slice(0, 2);
 
-      return `<svg width="34" height="34" viewBox="0 0 34 34" role="img" aria-label="${safeTitle}" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.5" y="0.5" width="33" height="33" rx="9" fill="${icon.bg}" />
-        <text x="17" y="20" text-anchor="middle" fill="${icon.fg}" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.02em;">${safeLabel}</text>
-      </svg>`;
+      if (!words.length) return 'IT';
+      return words.map((word) => word[0].toUpperCase()).join('');
+    }
+
+    function badgeMediaHtml(item, modifierClass = '') {
+      const mediaClass = ['badge-media', modifierClass].filter(Boolean).join(' ');
+      const label = item.title || item.name || item.issuer || 'Badge';
+      const safeAlt = escapeHtml(item.imageAlt || label);
+      const safeSrc = escapeHtml(item.imageSrc || '');
+      const safeFallback = escapeHtml(fallbackLabel(label));
+
+      if (!item.imageSrc) {
+        return `<span class="${mediaClass}"><span class="badge-fallback">${safeFallback}</span></span>`;
+      }
+
+      return `<span class="${mediaClass}">
+        <img src="${safeSrc}" alt="${safeAlt}" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <span class="badge-fallback" style="display:none;">${safeFallback}</span>
+      </span>`;
     }
 
     function statusClass(status) {
@@ -946,22 +993,20 @@
     function renderCredentialBadgeCard(item) {
       return `<a class="badge-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
         <div class="badge-top">
-          <span class="badge-icon">${iconSvg(item.iconKey, item.title)}</span>
+          ${badgeMediaHtml(item)}
           <span class="status-chip ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
         </div>
         <h3 class="badge-title">${escapeHtml(item.title)}</h3>
-        <p class="badge-summary">${escapeHtml(item.summary)}</p>
       </a>`;
     }
 
     function renderLanguageBadgeCard(item) {
       return `<a class="language-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
         <div class="language-top">
-          <span class="badge-icon">${iconSvg(item.iconKey, item.name)}</span>
+          ${badgeMediaHtml(item, 'badge-media--language')}
           <span class="status-chip status-skill">Skill</span>
         </div>
         <h3 class="language-title">${escapeHtml(item.name)}</h3>
-        <p class="language-summary">${escapeHtml(item.summary)}</p>
       </a>`;
     }
 
@@ -978,12 +1023,12 @@
         .filter(Boolean);
 
       const cardsHtml = featured.map(renderCredentialBadgeCard).join('');
-      renderWheel('it-wheel-track', cardsHtml, '46s');
+      renderWheel('it-wheel-track', cardsHtml, '40s');
     }
 
     function renderLanguagesWheel() {
       const cardsHtml = LANGUAGE_BADGES.map(renderLanguageBadgeCard).join('');
-      renderWheel('language-wheel-track', cardsHtml, '33s');
+      renderWheel('language-wheel-track', cardsHtml, '28s');
     }
 
     function renderCredentialCatalog() {
@@ -1008,7 +1053,7 @@
             return `<article class="catalog-item">
               <div class="catalog-item-header">
                 <div class="catalog-item-title">
-                  <span class="badge-icon">${iconSvg(item.iconKey, item.title)}</span>
+                  ${badgeMediaHtml(item, 'badge-media--catalog')}
                   <h4>${escapeHtml(item.title)}</h4>
                 </div>
                 <span class="status-chip ${statusClass(item.status)}">${escapeHtml(item.status)}</span>
