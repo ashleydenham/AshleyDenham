@@ -770,6 +770,21 @@
         radial-gradient(circle at top right, rgba(238, 214, 225, 0.25), transparent 34%);
     }
 
+    .project-copy {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      min-width: 0;
+    }
+
+    .project-card.featured {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 18px;
+      align-items: stretch;
+      min-height: 288px;
+    }
+
     #work .section-kicker,
     #work .section-title,
     #roadmap .section-kicker,
@@ -833,6 +848,17 @@
       color: var(--ink-inverse);
     }
 
+    .project-status {
+      margin: 0;
+      color: var(--ink-faint);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    #work .project-status {
+      color: rgba(255, 235, 244, 0.74);
+    }
+
     .project-link {
       display: inline-flex;
       align-items: center;
@@ -845,6 +871,31 @@
 
     #work .project-link {
       color: #ffe4ef;
+    }
+
+    .project-link.is-muted {
+      color: rgba(255, 233, 243, 0.7);
+    }
+
+    .project-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 0.64rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: inherit;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     .project-preview {
@@ -926,8 +977,58 @@
       background: rgba(255, 204, 228, 0.8);
     }
 
-    .project-card.featured {
-      min-height: 276px;
+    .project-preview--ai {
+      align-content: end;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 22% 22%, rgba(255, 197, 224, 0.28), transparent 20%),
+        radial-gradient(circle at 78% 24%, rgba(202, 191, 255, 0.22), transparent 18%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05)),
+        linear-gradient(180deg, rgba(49, 27, 39, 0.34), rgba(88, 43, 68, 0.18));
+    }
+
+    .project-preview--ai::after {
+      width: 190px;
+      height: 190px;
+      top: auto;
+      bottom: -48px;
+      right: -34px;
+      background: radial-gradient(circle at center, rgba(255, 184, 218, 0.34), transparent 70%);
+    }
+
+    .project-preview-stack {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 10px;
+      width: min(260px, 100%);
+      margin-top: auto;
+    }
+
+    .project-preview-stack span {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: 100%;
+      padding: 0.62rem 0.78rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff5fa;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.3;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .project-preview-stack span:nth-child(2) {
+      justify-self: end;
+      max-width: 92%;
+    }
+
+    .project-preview-stack span:nth-child(3) {
+      max-width: 86%;
     }
 
     .study-card,
@@ -1368,6 +1469,10 @@
         flex: 1 1 120px;
       }
 
+      .project-card.featured {
+        grid-template-columns: 1fr;
+      }
+
       .hero-notes span {
         flex-basis: 100%;
       }
@@ -1427,11 +1532,11 @@
       <div class="hero-copy">
         <p class="eyebrow">Personal profile</p>
         <h1>Ashley Denham</h1>
-        <p class="lede">Designing an AI profile grounded in healthcare judgment, legal study, and leadership experience.</p>
-        <p class="support">Based in Adelaide, I am building practical machine learning capability while drawing on nursing leadership, aged care, research, business study, and legal training to work across complex systems with real consequences.</p>
+        <p class="lede">Building a custom AI direction grounded in healthcare judgment, legal study, and leadership experience.</p>
+        <p class="support">Based in Adelaide, I am developing a custom AI system alongside broader machine learning capability while drawing on nursing leadership, aged care, research, business study, and legal training to work across complex systems with real consequences.</p>
         <div class="hero-notes" aria-label="Profile highlights">
           <span>Adelaide, Australia</span>
-          <span>AI / ML capability in progress</span>
+          <span>Custom AI in build</span>
           <span>Healthcare systems, governance, and delivery</span>
         </div>
         <nav aria-label="Social links" class="social-row" id="social-links"></nav>
@@ -1456,7 +1561,7 @@
           </article>
           <article class="snapshot-fact">
             <p class="snapshot-label">Focused on</p>
-            <p>Applied AI, automation, healthcare systems, and governance.</p>
+            <p>A custom AI build, applied automation, healthcare systems, and governance.</p>
           </article>
           <article class="snapshot-fact">
             <p class="snapshot-label">Bringing</p>
@@ -1487,7 +1592,7 @@
           <p class="section-kicker">Proof over posture</p>
           <h2 class="section-title" id="work-title">Selected work</h2>
         </div>
-        <p class="section-note">A small set of public work that shows current technical direction and what I am actively building around.</p>
+        <p class="section-note">A mix of live public work and the custom AI direction I am building now, with a placeholder ready for the product once it is ready to show.</p>
       </div>
       <div class="project-grid" id="projects-grid"></div>
     </section>
@@ -1566,7 +1671,7 @@
     const FOCUS_PILLARS = [
       {
         title: 'Applied AI and automation',
-        summary: 'Developing practical AI and ML capability with an emphasis on useful systems, automation, and technical fluency rather than empty signaling.'
+        summary: 'Developing practical AI and ML capability by building a custom AI system and surrounding automation, with an emphasis on useful systems rather than empty signaling.'
       },
       {
         title: 'Healthcare systems and leadership',
@@ -1580,16 +1685,32 @@
 
     const PROJECTS = [
       {
+        name: 'Custom AI',
+        url: '',
+        summary: 'Private custom AI system currently in development. Placeholder for the final product name, interface, and release link once the build is ready to show publicly.',
+        label: 'In development',
+        stage: 'Placeholder for the product name, live demo, and release notes.',
+        ctaLabel: 'Private build',
+        tags: ['Context-aware', 'Workflow automation', 'Human-in-the-loop'],
+        visual: 'ai'
+      },
+      {
         name: 'AshleyDenham',
         url: 'https://github.com/ashleydenham/AshleyDenham',
         summary: 'Personal website and profile source.',
-        label: 'Profile site'
+        label: 'Profile site',
+        stage: 'Live now',
+        ctaLabel: 'Open project',
+        tags: ['Design system', 'GitHub Pages']
       },
       {
         name: 'Automate-Adelaide',
         url: 'https://github.com/ashleydenham/Automate-Adelaide',
         summary: 'Website for Automate Adelaide.',
-        label: 'Project'
+        label: 'Project',
+        stage: 'Public repository',
+        ctaLabel: 'Open project',
+        tags: ['Website', 'Automation direction']
       }
     ];
 
@@ -1941,24 +2062,45 @@
     function renderProjects() {
       const container = document.getElementById('projects-grid');
       container.innerHTML = PROJECTS.map((item, index) => {
-        const preview = '<div class="project-preview">' +
-          '<span class="project-preview-badge">' + escapeHtml(item.label) + '</span>' +
-          '<div class="project-preview-lines">' +
-            '<span></span>' +
-            '<span></span>' +
-            '<span></span>' +
+        const isFeatured = index === 0;
+        const hasUrl = Boolean(item.url);
+        const tag = hasUrl ? 'a' : 'article';
+        const hrefAttrs = hasUrl ? ' href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer"' : '';
+        const preview = item.visual === 'ai'
+          ? '<div class="project-preview project-preview--ai">' +
+              '<span class="project-preview-badge">' + escapeHtml(item.label) + '</span>' +
+              '<div class="project-preview-stack">' +
+                '<span>Context-aware assistant logic</span>' +
+                '<span>Reasoning and workflow orchestration</span>' +
+                '<span>Private build placeholder ready for launch details</span>' +
+              '</div>' +
+            '</div>'
+          : '<div class="project-preview">' +
+              '<span class="project-preview-badge">' + escapeHtml(item.label) + '</span>' +
+              '<div class="project-preview-lines">' +
+                '<span></span>' +
+                '<span></span>' +
+                '<span></span>' +
+              '</div>' +
+            '</div>';
+        const cardClass = 'project-card ' + (isFeatured ? 'featured' : 'secondary');
+        const pillRow = item.tags && item.tags.length
+          ? '<div class="project-pill-row">' + item.tags.map((tagLabel) => '<span class="project-pill">' + escapeHtml(tagLabel) + '</span>').join('') + '</div>'
+          : '';
+        const ctaLabel = escapeHtml(item.ctaLabel || (hasUrl ? 'Open project' : 'Private build'));
+        const destination = hasUrl ? 'GitHub' : 'Private build';
+
+        return '<' + tag + ' class="' + cardClass + '"' + hrefAttrs + '>' +
+          (isFeatured ? preview : '') +
+          '<div class="project-copy">' +
+            '<div class="project-meta"><span>' + escapeHtml(item.label) + '</span><span>' + destination + '</span></div>' +
+            '<h3>' + escapeHtml(item.name) + '</h3>' +
+            '<p>' + escapeHtml(item.summary) + '</p>' +
+            (item.stage ? '<p class="project-status">' + escapeHtml(item.stage) + '</p>' : '') +
+            pillRow +
+            '<span class="project-link' + (hasUrl ? '' : ' is-muted') + '">' + ctaLabel + '</span>' +
           '</div>' +
-        '</div>';
-
-        const cardClass = 'project-card ' + (index === 0 ? 'featured' : 'secondary');
-
-        return '<a class="' + cardClass + '" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' +
-          (index === 0 ? preview : '') +
-          '<div class="project-meta"><span>' + escapeHtml(item.label) + '</span><span>GitHub</span></div>' +
-          '<h3>' + escapeHtml(item.name) + '</h3>' +
-          '<p>' + escapeHtml(item.summary) + '</p>' +
-          '<span class="project-link">Open project</span>' +
-        '</a>';
+        '</' + tag + '>';
       }).join('');
     }
 
