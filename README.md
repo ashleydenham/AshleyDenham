@@ -35,7 +35,7 @@ Personal homepage for **Ashley Denham**.
 4. Selected work
 5. Study and development
 6. Background
-7. IT credential roadmap
+7. Technical roadmap
 8. Footer
 
 ## Editable Content Blocks
@@ -47,7 +47,7 @@ At the top of the `<script>` block in `index.html`:
 - `FOCUS_PILLARS`
   - fields: `title`, `summary`
 - `PROJECTS`
-  - fields: `name`, `url`, `summary`, `label`, `stage`, `ctaLabel`, `tags`
+  - fields: `name`, `url`, `summary`, `label`, `stage`, `ctaLabel`, `tags`, `destination`
   - optional field: `visual` (`ai` enables the custom AI placeholder preview treatment)
 - `CURRENT_STUDY`
   - fields: `title`, `issuer`, `status`, `summary`, `url`, `imageSrc`, `imageAlt`
@@ -67,7 +67,7 @@ At the top of the `<script>` block in `index.html`:
 
 - The roadmap marquee auto-scrolls horizontally and pauses on hover/focus.
 - Badge logos are served from local files in `assets/badges/` to avoid external image failures.
-- The full IT credential library is available inside a `details` panel so the homepage stays lighter.
+- The full technical credential library is available inside a `details` panel so the homepage stays lighter.
 - The selected work section supports both live links and private placeholder cards for in-development projects.
 - Coding languages now render as a compact tools strip rather than a separate scrolling section.
 
