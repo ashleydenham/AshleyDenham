@@ -1,80 +1,105 @@
 # AshleyDenham.me
 
-Personal homepage for **Ashley Denham**.
+Personal portfolio for **Ashley Denham**: an Adelaide-based Mechatronics Engineering (Honours) student building AI agents, embedded systems, robotics projects, and trading infrastructure.
 
-## Live Site
+## What Changed
 
-[ashleydenham.me](https://ashleydenham.me)
+The site was rebuilt from a single-file static page into a small Next.js app. The previous version had useful local assets, semantic sections, and good reduced-motion intent, but it had become visually heavy and hard to maintain. The new version is intentionally quieter: typography-led, mostly monochrome, fast, mobile-first, and easier to edit through typed content.
 
 ## Stack
 
-- Single-file static HTML (`index.html`)
-- Custom CSS (no build step, no framework dependency)
-- Vanilla JavaScript for data rendering and UI interactions
-- GitHub Pages hosting from `main`
+- Next.js 14 App Router with TypeScript
+- Tailwind CSS for styling
+- shadcn-style `Button`, `Card`, and `Badge` primitives in `components/ui/`
+- Lucide React icons
+- `next-themes` for system-aware dark/light mode with persistence
+- `next/font` for Inter, Crimson Pro, and JetBrains Mono
+- Static export configured for GitHub Pages via `.github/workflows/jekyll-gh-pages.yml`
 
 ## Project Structure
 
+```text
+app/
+  globals.css       # Design tokens, theme variables, Tailwind layers
+  layout.tsx        # Metadata, fonts, theme provider, favicon/OG placeholders
+  page.tsx          # Single-page composition
+  not-found.tsx     # Custom 404 page
+  robots.ts         # robots.txt route
+  sitemap.ts        # sitemap.xml route
+components/
+  header.tsx        # Sticky nav, theme toggle, mobile menu
+  hero.tsx
+  now.tsx
+  projects.tsx
+  signals.tsx       # Memberships, credential roadmap, language evidence
+  about.tsx
+  contact.tsx
+  footer.tsx
+  scroll-effects.tsx # Subtle section reveal + tab title updates
+  ui/               # shadcn-style Button/Card/Badge
+content/
+  site.ts           # Typed site content and all editable public copy
+public/
+  avatar.jpg        # Existing profile image
+  badges/           # Local badge/icon assets for memberships and credentials
+  og.png            # Placeholder social preview image
+  CNAME             # GitHub Pages custom domain
 ```
-|-- index.html      # Homepage with all sections, styles, and JS data blocks
-|-- 404.html        # Custom 404 page
-|-- avatar.jpg      # Profile photo
-|-- CNAME           # Custom domain config
-|-- assets/
-|   `-- badges/     # Local logo assets used by credential and language badges
-`-- .github/
-    `-- workflows/
-        `-- jekyll-gh-pages.yml
+
+## Preserved Elements
+
+- Existing `avatar.jpg`, copied to `public/avatar.jpg` for Next.js serving.
+- The local-asset approach: no hotlinked Google image result URLs or tracking scripts.
+- Semantic section structure, visible focus states, reduced-motion handling, and keyboard navigability.
+- The custom 404 idea, rewritten in the requested dry Australian tone.
+
+## Changed Elements
+
+- Replaced the heavy glass/marquee layout with a restrained portfolio layout.
+- Reframed the site around Projects, About, Now, and Contact.
+- Added the exact About narrative and May 2026 Now section from the spec.
+- Added six project cards: Slothy, Hammy, PinkPulse, HamTrade, Home Lab, and Custom AI Models.
+- Added professional memberships and a credential roadmap in a restrained Signals section.
+- Added local badge/icon assets for memberships, certifications, and language evidence.
+- Added theme persistence, mobile slide-over navigation, scroll-triggered title updates, Open Graph metadata, robots, and sitemap.
+- Updated the GitHub Pages workflow to build the Next static export from `out/` instead of running Jekyll.
+
+## Editing Content
+
+Edit `content/site.ts` for public-facing copy:
+
+- `site.nav`
+- `site.hero`
+- `site.now`
+- `site.projects`
+- `site.memberships`
+- `site.credentials`
+- `site.about`
+- `site.contact`
+- `site.footer`
+
+The component files should rarely need changes unless the layout itself changes.
+
+## Development
+
+```bash
+npm install
+npm run dev -- -H 127.0.0.1 -p 4173
+npm run typecheck
+npm run lint
+npm run build
 ```
-
-## Homepage Sections (top to bottom)
-
-1. Sticky section navigation
-2. Hero (name, positioning statement, social links, profile snapshot)
-3. Current focus
-4. Selected work
-5. Study and development
-6. Background
-7. Technical roadmap
-8. Footer
-
-## Editable Content Blocks
-
-At the top of the `<script>` block in `index.html`:
-
-- `SOCIAL_LINKS`
-  - fields: `label`, `url`, `enabled`
-- `FOCUS_PILLARS`
-  - fields: `title`, `summary`
-- `PROJECTS`
-  - fields: `name`, `url`, `summary`, `label`, `stage`, `ctaLabel`, `tags`, `destination`
-  - optional field: `visual` (`ai` enables the custom AI placeholder preview treatment)
-- `CURRENT_STUDY`
-  - fields: `title`, `issuer`, `status`, `summary`, `url`, `imageSrc`, `imageAlt`
-- `IT_CREDENTIALS`
-  - fields: `id`, `title`, `issuer`, `category`, `status`, `url`, `summary`, `imageSrc`, `imageAlt`
-  - `status` values in use: `in-progress`, `planned`
-- `LANGUAGE_BADGES`
-  - fields: `name`, `url`, `imageSrc`, `imageAlt`
-- `NON_IT_QUALIFICATIONS`
-  - array of qualification strings rendered in the Background section
-- `CAREER_HIGHLIGHTS`
-  - array of career highlight strings rendered in the Background section
-- `ROADMAP_ORDER`
-  - array of credential `id` values used in the IT roadmap marquee
-
-## Interaction Notes
-
-- The roadmap marquee auto-scrolls horizontally and pauses on hover/focus.
-- Badge logos are served from local files in `assets/badges/` to avoid external image failures.
-- The full technical credential library is available inside a `details` panel so the homepage stays lighter.
-- The selected work section supports both live links and private placeholder cards for in-development projects.
-- Coding languages now render as a compact tools strip rather than a separate scrolling section.
 
 ## Deployment
 
-This site is deployed by GitHub Pages from the root of the `main` branch.
+The repository currently exports a static Next.js build for GitHub Pages. The footer copy follows the requested wording, but if the site is moved to Vercel later the build config can be simplified by removing `output: 'export'` from `next.config.mjs` and connecting the repo in Vercel.
+
+## Notes
+
+- No analytics, tracking, forms, or third-party runtime scripts are included.
+- `/og.png` is a placeholder. Replace it with a proper 1200x630 Open Graph image when ready.
+- The inline favicon is a temporary monogram. Replace it with a complete favicon set in `public/` when the final mark exists.
 
 ## License
 
-(c) 2026 Ashley Denham. All rights reserved.
+© 2026 Ashley Denham. All rights reserved.
