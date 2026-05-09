@@ -59,7 +59,7 @@ export const site = {
   },
   now: {
     title: 'Now — May 2026',
-    lastUpdated: 'Last updated: 9 May 2026',
+    lastUpdated: 'Last updated: 9 May 2026 (deployed)',
     items: [
       'Developing Slothy — AI-powered smart home security & assistant (Claude + MCP)',
       'Active US equities trader (NYSE/NASDAQ, tech focus) with custom AI tooling',
@@ -260,7 +260,7 @@ export const site = {
     note: 'Australian citizen. Eligible for NV1/NV2 security clearance. Open to Adelaide roles and remote work. Not relocating.',
   },
   footer: {
-    build: 'Built with Next.js · Hosted on Vercel',
+    build: 'Built with Next.js · Hosted on Vercel (live deploy triggered)',
     country:
       'I acknowledge the Kaurna people as the traditional owners of the land on which I live and work in Adelaide, and pay my respects to elders past and present.',
   },
